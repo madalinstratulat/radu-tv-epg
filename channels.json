@@ -1,84 +1,313 @@
 {
- "A7TV.ro": "a7tv",
- "Acasa.ro": "acasa-hd",
- "AcasaGold.ro": "acasa-gold-hd",
- "AgroTV.ro": "agro-tv",
- "AlephBusiness.ro": "aleph-business-hd",
- "AlephNews.ro": "aleph-news",
- "AlfaOmegaTV.ro": "alfa-omega-tv",
- "AngelusTV.ro": "angelus-tv",
- "Antena1.ro": "antena-1-hd",
- "Antena3CNN.ro": "antena-3-cnn-hd",
- "AntenaInternational.ro": "antena-international-hd",
- "AntenaStars.ro": "antena-stars-hd",
- "B1.ro": "b1-tv-hd",
- "BeautyON.ro": "beauty-on",
- "BollywoodFilm.ro": "bollywood-film",
- "BoomTV.ro": "boom-tv",
- "Chefiro.ro": "chefi-ro-hd",
- "CinemaratonPlus.ro": "cinemaraton-plus",
- "CineWow.ro": "cinewow-hd",
- "CredoTV.ro": "credo-tv",
- "Digi24.ro": "digi-24-hd",
- "DiscoMix.ro": "disco-mix",
- "DisneyChannel.ro": "disney-channel",
- "EMITV.ro": "emi-tv-hd",
- "EtnoTV.ro": "etno-tv-hd",
- "EuronewsRomania.ro": "euronews-romania-hd",
- "FavoritTV.ro": "favorit",
- "HtMusicChannel.ro": "hit-music-channel",
- "HappyChannel.ro": "happy-channel-hd",
- "IneditTV.ro": "inedit-tv",
- "JOBTV.ro": "job-tv",
- "KanalD.ro": "kanal-d-hd",
- "KanalD2.ro": "kanal-d2-hd",
- "KissTV.ro": "kiss-tv",
- "MagicTV.ro": "magic-tv-hd",
- "MetropolaTV.ro": "metropola-tv-hd",
- "MoozDance.ro": "mooz-dance-hd",
- "MoozHits.ro": "mooz-hits",
- "MoozRo.ro": "mooz-ro",
- "MusicChannel.ro": "music-channel",
- "NasulTV.ro": "nasul-tv",
- "National24Plus.ro": "national-24-plus",
- "NationalGeographicWild.ro": "national-geographic-wild-hd",
- "NationalTV.ro": "national-tv",
- "NostalgiaTV.ro": "nostalgia-tv",
- "OrizontTV.ro": "orizont-tv",
- "PartyMix.ro": "party-mix-hd",
- "PrimaNews.ro": "prima-news",
- "PrimaSport1.ro": "prima-sport-1-hd",
- "PrimaSport2.ro": "prima-sport-2-hd",
- "PrimaSport3.ro": "prima-sport-3-hd",
- "PrimaSport4.ro": "prima-sport-4-hd",
- "PrimaTV.ro": "prima-tv-hd",
- "ProArena.ro": "pro-arena-hd",
- "ProCinema.ro": "pro-cinema-hd",
- "PROTV.ro": "pro-tv-hd",
- "PROTVInternational.ro": "protv-international",
- "PROFI24TV.ro": "profi-24-tv",
- "RapsodiaTV.ro": "rapsodia-tv",
- "RealitateaPlus.ro": "realitatea-plus",
- "RockTV.ro": "rock-tv-hd",
- "RomaniaTV.ro": "romania-tv-hd",
- "TarafTV.ro": "taraf-tv-hd",
- "TraditionalTV.ro": "traditional-tv",
- "TraLaLaTV.ro": "tralala-hd",
- "TravelMix.ro": "travel-mix",
- "TVAS.ro": "tv-as",
- "TVPaprika.ro": "tv-paprika-hd",
- "TVR1.ro": "tvr-1-hd",
- "TVR2.ro": "tvr-2-hd",
- "TVR3.ro": "tvr-3",
- "TVRCluj.ro": "tvr-cluj",
- "TVRCraiova.ro": "tvr-craiova",
- "TVRCultural.ro": "tvr-cultural",
- "TVRFolclor.ro": "tvr-folclor",
- "TVRIasi.ro": "tvr-iasi",
- "TVRInfo.ro": "tvr-info",
- "TVRInternational.ro": "tvr-international",
- "TVRSport.ro": "tvr-sport-hd",
- "TVRTarguMures.ro": "tvr-targu-mures",
- "TVRTimisoara.ro": "tvr-timisoara",
- "UTV.ro": "utv-hd"
+ "A7TV.ro": {
+  "api": "a7tv"
+ },
+ "Acasa.ro": {
+  "api": "acasa-hd",
+  "ptv": "ACASA"
+ },
+ "AcasaGold.ro": {
+  "api": "acasa-gold-hd",
+  "ptv": "ACASA_GOLD"
+ },
+ "AgroTV.ro": {
+  "api": "agro-tv",
+  "ptv": "AGRO_TV"
+ },
+ "AlephBusiness.ro": {
+  "api": "aleph-business-hd"
+ },
+ "AlephNews.ro": {
+  "api": "aleph-news"
+ },
+ "AlfaOmegaTV.ro": {
+  "api": "alfa-omega-tv",
+  "ptv": "ALFA_OMEGA_TV"
+ },
+ "AngelusTV.ro": {
+  "api": "angelus-tv"
+ },
+ "Antena1.ro": {
+  "api": "antena-1-hd",
+  "ptv": "ANTENA1"
+ },
+ "Antena3CNN.ro": {
+  "api": "antena-3-cnn-hd",
+  "ptv": "ANTENA3"
+ },
+ "AntenaInternational.ro": {
+  "api": "antena-international-hd",
+  "ptv": "ANTENA_INTERNATIONAL"
+ },
+ "AntenaStars.ro": {
+  "api": "antena-stars-hd",
+  "ptv": "ANTENA_STARS"
+ },
+ "B1.ro": {
+  "api": "b1-tv-hd"
+ },
+ "BollywoodClassic.ro": {
+  "api": "bollywood-classic",
+  "ptv": "BOLLYWOOD_CLASSIC"
+ },
+ "BollywoodFilm.ro": {
+  "api": "bollywood-film",
+  "ptv": "BOLLYWOOD_FILM"
+ },
+ "BollywoodHD.ro": {
+  "api": "bollywood-hd"
+ },
+ "BoomTV.ro": {
+  "api": "boom-tv"
+ },
+ "Chefiro.ro": {
+  "api": "chefi.ro",
+  "ptv": "CHEFI_RO"
+ },
+ "CineWow.ro": {
+  "api": "cinewow-hd",
+  "ptv": "CINEWOW"
+ },
+ "CinemaratonPlus.ro": {
+  "api": "cinemaraton-plus",
+  "ptv": "CINEMARATON_PLUS"
+ },
+ "CredoTV.ro": {
+  "api": "credo-tv"
+ },
+ "Digi24.ro": {
+  "api": "digi-24-hd"
+ },
+ "DiscoMix.ro": {
+  "api": "disco-mix"
+ },
+ "DisneyChannel.ro": {
+  "api": "disney-channel",
+  "ptv": "DISNEY"
+ },
+ "EMITV.ro": {
+  "api": "emi-tv-hd"
+ },
+ "EtnoTV.ro": {
+  "api": "etno-tv-hd",
+  "ptv": "ETNO_TV"
+ },
+ "EuronewsRomania.ro": {
+  "api": "euronews-romania-hd"
+ },
+ "FavoritTV.ro": {
+  "api": "favorit",
+  "ptv": "FAVORIT_TV"
+ },
+ "FavoritTV2.ro": {
+  "ptv": "FAVORIT_TV2"
+ },
+ "HappyChannel.ro": {
+  "api": "happy-channel-hd",
+  "ptv": "HAPPY_CHANNEL"
+ },
+ "HtMusicChannel.ro": {
+  "api": "h!t-music-channel"
+ },
+ "IneditTV.ro": {
+  "api": "inedit-tv"
+ },
+ "JOBTV.ro": {
+  "api": "job-tv"
+ },
+ "KanalD.ro": {
+  "api": "kanal-d-hd",
+  "ptv": "KANALD"
+ },
+ "KanalD2.ro": {
+  "api": "kanal-d2-hd",
+  "ptv": "KANALD2"
+ },
+ "KissTV.ro": {
+  "api": "kiss-tv"
+ },
+ "MagicTV.ro": {
+  "api": "magic-tv-hd"
+ },
+ "MetropolaTV.ro": {
+  "api": "metropola-tv-hd",
+  "ptv": "METROPOLA_TV"
+ },
+ "MoozDance.ro": {
+  "api": "mooz-dance-hd"
+ },
+ "MoozHits.ro": {
+  "api": "mooz-hits"
+ },
+ "MoozRo.ro": {
+  "api": "mooz-ro"
+ },
+ "MusicChannel.ro": {
+  "api": "music-channel"
+ },
+ "NasulTV.ro": {
+  "api": "nasul-tv"
+ },
+ "National24Plus.ro": {
+  "api": "national-24-plus",
+  "ptv": "NATIONAL_24_PLUS"
+ },
+ "NationalGeographicWild.ro": {
+  "api": "nat-geo-wild",
+  "ptv": "NATGEOWILD"
+ },
+ "NationalTV.ro": {
+  "api": "national-tv",
+  "ptv": "NATIONAL_TV"
+ },
+ "NationalTV2.ro": {
+  "ptv": "NATIONAL_TV2"
+ },
+ "NostalgiaTV.ro": {
+  "api": "nostalgia-tv",
+  "ptv": "NOSTALGIA_TV"
+ },
+ "OrizontTV.ro": {
+  "api": "orizont-tv"
+ },
+ "PROFI24TV.ro": {
+  "api": "profi-24-tv"
+ },
+ "PROTV.ro": {
+  "api": "pro-tv-hd",
+  "ptv": "PRO_TV"
+ },
+ "PROTVInternational.ro": {
+  "api": "pro-tv-international",
+  "ptv": "PRO_TV_INTERNATIONAL"
+ },
+ "PartyMix.ro": {
+  "api": "party-mix-hd"
+ },
+ "PrimaNews.ro": {
+  "api": "prima-news",
+  "ptv": "PRIMANEWS"
+ },
+ "PrimaSport1.ro": {
+  "api": "prima-sport-1-hd",
+  "ptv": "PRIMASPORT1"
+ },
+ "PrimaSport2.ro": {
+  "api": "prima-sport-2-hd",
+  "ptv": "PRIMASPORT2"
+ },
+ "PrimaSport3.ro": {
+  "api": "prima-sport-3-hd",
+  "ptv": "PRIMASPORT3"
+ },
+ "PrimaSport4.ro": {
+  "api": "prima-sport-4-hd",
+  "ptv": "PRIMASPORT4"
+ },
+ "PrimaTV.ro": {
+  "api": "prima-tv-hd",
+  "ptv": "PRIMA_TV"
+ },
+ "ProArena.ro": {
+  "api": "pro-arena-hd",
+  "ptv": "PRO_ARENA"
+ },
+ "ProCinema.ro": {
+  "api": "pro-cinema-hd",
+  "ptv": "PRO_CINEMA"
+ },
+ "RapsodiaTV.ro": {
+  "api": "rapsodia-tv"
+ },
+ "RealitateaPlus.ro": {
+  "api": "realitatea-plus"
+ },
+ "RockTV.ro": {
+  "api": "rock-tv-hd"
+ },
+ "RomaniaTV.ro": {
+  "api": "romania-tv-hd"
+ },
+ "SperantaTV.ro": {
+  "ptv": "SPERANTA_TV"
+ },
+ "TVAS.ro": {
+  "api": "tv-as"
+ },
+ "TVPaprika.ro": {
+  "api": "tv-paprika-hd",
+  "ptv": "PAPRIKA"
+ },
+ "TVR1.ro": {
+  "api": "tvr-1-hd",
+  "ptv": "TVR1"
+ },
+ "TVR2.ro": {
+  "api": "tvr-2-hd",
+  "ptv": "TVR2"
+ },
+ "TVR3.ro": {
+  "api": "tvr-3",
+  "ptv": "TVR3"
+ },
+ "TVRCluj.ro": {
+  "api": "tvr-cluj",
+  "ptv": "TVR_CLUJ"
+ },
+ "TVRCraiova.ro": {
+  "api": "tvr-craiova",
+  "ptv": "TVR_CRAIOVA"
+ },
+ "TVRCultural.ro": {
+  "api": "tvr-cultural",
+  "ptv": "TVR_CULTURAL"
+ },
+ "TVRFolclor.ro": {
+  "api": "tvr-folclor",
+  "ptv": "TVR_FOLCLOR"
+ },
+ "TVRIasi.ro": {
+  "api": "tvr-iasi",
+  "ptv": "TVR_IASI"
+ },
+ "TVRInfo.ro": {
+  "api": "tvr-info",
+  "ptv": "TVR_INFO"
+ },
+ "TVRInternational.ro": {
+  "api": "tvr-international",
+  "ptv": "TVRI"
+ },
+ "TVRSport.ro": {
+  "api": "tvr-sport-hd",
+  "ptv": "TVR_SPORT"
+ },
+ "TVRTarguMures.ro": {
+  "api": "tvr-targu-mures",
+  "ptv": "TVR_MURES"
+ },
+ "TVRTimisoara.ro": {
+  "api": "tvr-timisoara",
+  "ptv": "TVR_TIMISOARA"
+ },
+ "TarafTV.ro": {
+  "api": "taraf-tv-hd"
+ },
+ "TraLaLaDSN.ro": {
+  "ptv": "TRALALA_DSN"
+ },
+ "TraLaLaTV.ro": {
+  "api": "tralala-hd",
+  "ptv": "TRALALA"
+ },
+ "TraditionalTV.ro": {
+  "api": "traditional-tv"
+ },
+ "TravelMix.ro": {
+  "api": "travel-mix",
+  "ptv": "TRAVEL_MIX"
+ },
+ "UTV.ro": {
+  "api": "utv-hd"
+ }
 }
