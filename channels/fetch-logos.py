@@ -46,6 +46,7 @@ def to_png(data, ctype, url):
 def work(item):
     dest = os.path.join(OUT, item['file'])
     if os.path.exists(dest): return None
+    last = 'nicio adresa de sigla'
     for url in item['urls']:
         try:
             data, ctype = fetch(url)
