@@ -1,0 +1,8 @@
+name: probe
+on: { workflow_dispatch: {} }
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in "https://www.cinemagia.ro/program-tv/pro-tv-hd/" "https://www.tvmania.ro/program-tv/pro-tv" "https://programtv.ro/pro-tv" "https://www.programetv.ro/pro-tv/" "https://program-tv.net/pro-tv/" "https://www.protv.ro/program-tv" "https://www.digi24.ro/program-tv" "https://tvprofil.com/ro/program-tv/pro-tv/" "https://www.cinemagia.ro/" "https://www.program-tv.ro/pro-tv"; do printf "%s %s\n" "$(curl -s -o /dev/null -w '%{http_code}' -L -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' --max-time 25 "$u")" "$u"; done

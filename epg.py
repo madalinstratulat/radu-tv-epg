@@ -27,6 +27,8 @@ def main():
     chans = json.load(open('channels.json', encoding='utf-8'))
     with ThreadPoolExecutor(max_workers=4) as ex: res = dict(ex.map(grab, chans.items()))
     ok = {k: v for k, v in res.items() if v}
+    if len(ok) < max(10, len(chans) // 4):
+        sys.exit(f'prea putine canale cu program ({len(ok)}/{len(chans)}); nu suprascriu epg.json')
     data = {'day': time.strftime('%Y-%m-%d'), 'tz': 'Europe/Bucharest', 'generated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'channels': ok}
     json.dump(data, open('epg.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print(f'{len(ok)}/{len(chans)} canale cu program, {sum(len(v) for v in ok.values())} emisiuni')
