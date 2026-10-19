@@ -382,8 +382,26 @@
   "api": "utv-hd",
   "xmltv": "RO1#UTV.ro"
  },
+ "Moldova1.md": {
+  "xmltv": "IPTVX#moldova-1"
+ },
  "TVRMoldova.md": {
   "xmltv": "RO1#TVR.Moldova.ro"
+ },
+ "PROTVChisinau.md": {
+  "xmltv": "IPTVX#pro-tv-md"
+ },
+ "TV8.md": {
+  "xmltv": "IPTVX#tv8-md"
+ },
+ "Moldova2.md": {
+  "xmltv": "IPTVX#moldova-2"
+ },
+ "NorocTV.md": {
+  "xmltv": "IPTVX#noroc-tv-md"
+ },
+ "ExclusivTV.md": {
+  "xmltv": "IPTVX#tnt-bravo-moldova"
  },
  "MoldovaTV.md": {
   "xmltv": "RO1#Moldova.TV.ro"

@@ -9,19 +9,22 @@ def norm(s):
     s = re.sub(r'\((?:hd|hd / 4k)\)', '', s); s = re.sub(r'\b(hd|tv|channel)\b', '', s)
     return re.sub(r'[^a-z0-9]', '', s)
 
-FILES = {'ro': ['RO1'], 'md': ['RO1'], 'fr': ['FR1'], 'be': ['BE2', 'FR1']}
+FILES = {'ro': ['RO1'], 'md': ['RO1', 'IPTVX'], 'fr': ['FR1'], 'be': ['FR1']}
+MANUAL = {'PROTVChisinau.md': 'IPTVX#pro-tv-md', 'TV8.md': 'IPTVX#tv8-md', 'Moldova1.md': 'IPTVX#moldova-1', 'Moldova2.md': 'IPTVX#moldova-2',
+          'ExclusivTV.md': 'IPTVX#tnt-bravo-moldova', 'NorocTV.md': 'IPTVX#noroc-tv-md'}
 NOT = {'MagicTV.ro', 'PROTVChisinau.md'}   # Magic.be is a different station; PRO TV Chisinau has its own schedule
 src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'LgIptv', 'app', 'channels.js'), encoding='utf-8').read()
 app = json.loads(src[src.index('{'):src.rindex('}') + 1])
 old = json.load(open('channels.json', encoding='utf-8'))
-names = {f: json.load(open(os.path.join(sys.argv[1], f + '.names.json'), encoding='utf-8')) for f in ['RO1', 'FR1', 'BE2']}
+names = {f: json.load(open(os.path.join(sys.argv[1], f + '.names.json'), encoding='utf-8')) for f in ['RO1', 'FR1', 'IPTVX']}
 out = {}
 for g in app['groups']:
     if g['id'] not in FILES: continue
     for c in g['channels']:
         if c.get('cat') == 'radio': continue
         e = {k: v for k, v in old.get(c['id'], {}).items() if k in ('api', 'ptv')}
-        if c['id'] not in NOT:
+        if c['id'] in MANUAL: e['xmltv'] = MANUAL[c['id']]
+        elif c['id'] not in NOT:
             for f in FILES[g['id']]:
                 cands = [cid for cid, (n, cnt) in names[f].items() if cnt > 0 and norm(n) == norm(c['name'])]
                 if cands: e['xmltv'] = f + '#' + sorted(cands, key=lambda x: ('.HD.' in x, x.count('.'), x))[0]; break

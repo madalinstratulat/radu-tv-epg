@@ -2,7 +2,7 @@
 """Builds epg.json for Radu TV: the schedule of every mapped channel for today and tomorrow (Romanian calendar),
 as [[start_epoch_minutes, title], ...] in UTC - the TV converts to wherever it is. Runs once a day in GitHub Actions.
 Sources, in order per channel (channels.json: iptv-org id -> {xmltv, api, ptv}):
-  xmltv: epgshare01.online XMLTV files (FILE#channel_id), several days ahead, absolute times -> RO, FR, BE, some MD
+  xmltv: XMLTV files (FILE#channel_id): epgshare01.online RO1/FR1 (RO, FR), iptvx.one (MD); several days ahead, absolute times
   api:   the JSON API behind programtv.ro (mirror of cinemagia; cinemagia itself blocks datacenter IPs), one day per call
   ptv:   program-tv.ro channel pages (own data; 403 from GitHub, works from a home connection)
 python3 epg.py --names DIR  also dumps each XMLTV file's channel list (for map.py)."""
@@ -13,7 +13,9 @@ from zoneinfo import ZoneInfo
 
 UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36'
 RO = ZoneInfo('Europe/Bucharest')
-XMLTV_URL = 'https://epgshare01.online/epgshare01/epg_ripper_{}.xml.gz'
+XMLTV_URLS = {'RO1': 'https://epgshare01.online/epgshare01/epg_ripper_RO1.xml.gz',
+              'FR1': 'https://epgshare01.online/epgshare01/epg_ripper_FR1.xml.gz',
+              'IPTVX': 'https://iptvx.one/epg/epg_noarch.xml.gz'}      # ~36 MB, 4300 channels incl. Moldova 1/2, Pro TV Chisinau, TV8, Jurnal TV
 PTV_ROW = re.compile(r'<time class="progentry_time[^"]*" itemprop="startDate" content="[^"]*">\s*(\d{1,2}):(\d{2})</time>[\s\S]*?'
                      r'<h3 class="[^"]*progentry_progtitle[^"]*" itemprop="name"><a[^>]*>(?:<strong>)?([^<]+?)(?:</strong>)?</a>')
 
@@ -21,7 +23,7 @@ def get(url, accept='text/html', binary=False):
     r = urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': UA, 'Accept': accept, 'Accept-Language': 'ro'}), timeout=120).read()
     return r if binary else r.decode('utf-8', 'replace')
 
-def clean(t): return re.sub(r'\s+', ' ', html.unescape(t or '')).strip()
+def clean(t): return re.sub(r'^(?:х/ф|т/с|д/ф|м/ф|д/с|м/с)\s*', '', re.sub(r'\s+', ' ', html.unescape(t or '')).strip())   # iptvx.one genre prefixes
 
 # ---- xmltv -----------------------------------------------------------------------------------------------------
 xml_cache = {}
@@ -30,8 +32,7 @@ def xmltv_file(name):
     if name in xml_cache: return xml_cache[name]
     out = {}
     try:
-        raw = gzip.decompress(get(XMLTV_URL.format(name), '*/*', True))
-        for ev, el in ET.iterparse(io.BytesIO(raw)):
+        for ev, el in ET.iterparse(gzip.GzipFile(fileobj=io.BytesIO(get(XMLTV_URLS[name], '*/*', True)))):
             if el.tag != 'programme': continue
             try:
                 t = int(datetime.strptime(el.get('start'), '%Y%m%d%H%M%S %z').timestamp() // 60)
@@ -101,9 +102,9 @@ def main():
     WIN0 = int(start.timestamp() // 60); WIN1 = int((start + timedelta(days=2)).timestamp() // 60)   # today + tomorrow (RO)
     if '--names' in sys.argv:
         d = sys.argv[sys.argv.index('--names') + 1]; os.makedirs(d, exist_ok=True)
-        for f in ('RO1', 'FR1', 'BE2'):
-            raw = gzip.decompress(get(XMLTV_URL.format(f), '*/*', True)); names = {}; cnt = {}
-            for ev, el in ET.iterparse(io.BytesIO(raw)):
+        for f in XMLTV_URLS:
+            names = {}; cnt = {}
+            for ev, el in ET.iterparse(gzip.GzipFile(fileobj=io.BytesIO(get(XMLTV_URLS[f], '*/*', True)))):
                 if el.tag == 'channel': names[el.get('id')] = clean(el.findtext('display-name'))
                 elif el.tag == 'programme': cnt[el.get('channel')] = cnt.get(el.get('channel'), 0) + 1; el.clear()
             json.dump({k: [v, cnt.get(k, 0)] for k, v in names.items()}, open(os.path.join(d, f + '.names.json'), 'w', encoding='utf-8'), ensure_ascii=False)
