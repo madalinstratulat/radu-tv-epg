@@ -1,0 +1,408 @@
+{
+  "groups": [
+    {
+      "id": "ro",
+      "name": "România",
+      "country": "RO",
+      "exclude": [
+        "ComedyCentral.ro",
+        "DigiSport2.ro",
+        "DisneyJunior.ro",
+        "FilmNow.ro",
+        "Hunedoara1.ro",
+        "ImpactTVDance.ro",
+        "KapitalTV.ro",
+        "Minimax.ro",
+        "NationalGeographic.ro",
+        "Nickelodeon.ro",
+        "Nicktoons.ro",
+        "RadioRomania3Net.ro",
+        "RadioRomaniaAntenaSatelor.ro",
+        "RadioRomaniaOlteniaCraiova.ro",
+        "RadioRomaniaResita.ro",
+        "TimelessDiziChannel.ro",
+        "ViasatExplore.ro",
+        "ViasatHistory.ro",
+        "ViasatNature.ro"
+      ]
+    },
+    {
+      "id": "md",
+      "name": "Moldova",
+      "country": "MD",
+      "first": [
+        "Moldova1.md",
+        "TVRMoldova.md",
+        "PROTVChisinau.md",
+        "TV8.md",
+        "RealitateaTV.md",
+        "Moldova2.md",
+        "VoceaBasarabieiTV.md",
+        "NorocTV.md",
+        "TezaurTV.md",
+        "TSV.md",
+        "ExclusivTV.md",
+        "SorTV.md",
+        "MoldovaTV.md"
+      ]
+    },
+    {
+      "id": "be",
+      "name": "Belgia",
+      "country": "BE",
+      "languages": [
+        "fra",
+        "eng"
+      ],
+      "allowGeoBlocked": true,
+      "first": [
+        "LaUne.be",
+        "RTLTVI.be",
+        "Tipik.be",
+        "LaTrois.be",
+        "BX1.be",
+        "CanalZ.be",
+        "BelRTL.be",
+        "RadioContact.be",
+        "TeleMB.be",
+        "TVLux.be",
+        "Vedia.be",
+        "ACTV.be",
+        "Matele.be",
+        "Telesambre.be",
+        "TVcom.be",
+        "CanalZoom.be",
+        "Bouke.be",
+        "QU4TRELiegeMedia.be",
+        "Bruzz.be"
+      ],
+      "exclude": [
+        "LaUne.be",
+        "LaTrois.be",
+        "Tipik.be",
+        "RTLTVI.be",
+        "BelRTL.be",
+        "RadioContact.be",
+        "CanalZoom.be",
+        "BAMTV.be"
+      ],
+      "_note": "RTBF/RTL nu au stream-uri deschise (Auvio/RTL Play cu cont + DRM); adresele din iptv-org erau retransmisii expirate"
+    },
+    {
+      "id": "fr",
+      "name": "Franța",
+      "allowGeoBlocked": true,
+      "_note": "Oficiale: arte, BFM TV, France 24, RMC Story/Decouverte, L'Equipe, TV5Monde FBS. TF1/TMC/France 3/Gulli/CNews sunt retransmisii din iptv-org, pot muri.",
+      "channels": [
+        "TF1.fr",
+        "France3.fr",
+        "arte.fr",
+        "TMC.fr",
+        "Gulli.fr",
+        "BFMTV.fr",
+        "CNews.fr",
+        {
+          "channel": "France24.fr",
+          "feed": "French",
+          "name": "France 24"
+        },
+        "TV5MondeFranceBelgiumSwitzerlandMonaco.fr",
+        "RMCStory.fr",
+        "RMCDecouverte.fr",
+        "LEquipe.fr",
+        "CStar.fr"
+      ]
+    },
+    {
+      "id": "ru",
+      "name": "Rusia",
+      "country": "RU",
+      "excludeName": "^(RT\\b|Sputnik)",
+      "categories": [
+        "general",
+        "news",
+        "entertainment",
+        "movies",
+        "series",
+        "music",
+        "kids",
+        "sports",
+        "documentary",
+        "comedy",
+        "family",
+        "culture"
+      ],
+      "first": [
+        "ChannelOne.ru",
+        "Russia1.ru",
+        "NTV.ru",
+        "TNT.ru",
+        "STS.ru",
+        "RENTV.ru",
+        "Channel5.ru",
+        "Russia24.ru",
+        "RussiaK.ru",
+        "Domashniy.ru",
+        "TV3.ru",
+        "Friday.ru",
+        "Zvezda.ru",
+        "Mir.ru",
+        "Mir24.ru",
+        "Carousel.ru",
+        "MuzTV.ru",
+        "EuropaPlusTV.ru",
+        "Che.ru",
+        "2x2.ru",
+        "Domkino.ru",
+        "KinoTV.ru",
+        "Kinopokaz.ru",
+        "Kinopremyera.ru",
+        "MatchUltra.ru",
+        "MatchArena.ru",
+        "MatchIgra.ru",
+        "MatchStrana.ru",
+        "Izvestia.ru",
+        "OTR.ru",
+        "STSLove.ru",
+        "STSkids.ru",
+        "TNT4.ru",
+        "NTVSeries.ru",
+        "MirSeriala.ru"
+      ],
+      "exclude": [
+        "15PlusMusic.ru",
+        "Arktika24.ru",
+        "Bashkortostan24.ru",
+        "DetvoraPlus.ru",
+        "Kavkaz24.ru",
+        "Kino24.ru",
+        "Samara24.ru",
+        "SetantaSports1.ru",
+        "SetantaSports2.ru",
+        "Sibir24.ru",
+        "TV1000RussianKinoGlobal.ru",
+        "Ural24.ru",
+        "VelvetEuropeanMovies.ru",
+        "VelvetGoldenCollection.ru",
+        "VelvetMentovskiyeSerialy.ru",
+        "VelvetScary.ru",
+        "VelvetSeriesHits.ru",
+        "VelvetSovetskoeKino.ru",
+        "VelvetSvaty.ru",
+        "VelvetWorldSeries.ru",
+        "Vostok24.ru",
+        "Zapad24.ru",
+        "alphaCinema.ru"
+      ]
+    },
+    {
+      "id": "news",
+      "name": "Știri",
+      "channels": [
+        "CNNInternational.us",
+        {
+          "channel": "BBCNews.uk",
+          "feed": "Europe",
+          "name": "BBC News"
+        },
+        "EuronewsEnglish.fr",
+        {
+          "channel": "France24.fr",
+          "feed": "English",
+          "name": "France 24 English"
+        },
+        {
+          "channel": "DW.de",
+          "feed": "English",
+          "name": "DW English"
+        },
+        "BloombergTV.us",
+        "CNBCEurope.uk",
+        "GBNews.uk",
+        "TRTWorld.tr",
+        "NHKWorldJapan.jp",
+        "BFMTV.fr",
+        "LCI.fr",
+        "CNews.fr",
+        "EuronewsFrench.fr",
+        {
+          "channel": "France24.fr",
+          "feed": "French",
+          "name": "France 24 Français"
+        },
+        "TV5MondeInfo.fr",
+        "TV5MondeFranceBelgiumSwitzerlandMonaco.fr",
+        "BFMBusiness.fr"
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Muzică",
+      "channels": [
+        "MTVLive.us",
+        "MTVBiggestPop.us",
+        "MTVClassic.us",
+        "MTVSpankinNew.us",
+        "Now70s.uk",
+        "Now80s.uk",
+        "Now90s00s.uk",
+        "MusicBox80s.cz",
+        "MusicBoxHits.cz",
+        "MusicBoxDance.cz",
+        "VevoPop.us",
+        "VevoHipHop.us",
+        "VevoRB.us",
+        "VevoLatino.us",
+        "ClubbingTV.us",
+        "DeluxeMusic.de",
+        "DeluxeDance.de",
+        "DeluxeLounge.de",
+        "TraceUrban.fr",
+        "TraceUK.uk",
+        "XITE.nl",
+        "XITEHits.nl",
+        "XITERockxMetal.nl",
+        "StingrayGreatestHits.ca",
+        "StingrayHitList.ca",
+        "StingrayRememberthe80s.ca",
+        "StingrayNothinBut90s.ca",
+        "StingrayClassicRock.ca",
+        "StingraySmoothJazz.ca",
+        "QelloConcertsbyStingray.ca",
+        "Mezzo.fr",
+        "MezzoLive.fr",
+        "StingrayClassica.ca",
+        "KissTV.ro",
+        "MagicTV.ro",
+        "PartyMix.ro",
+        "1HDMusicTelevision.ru",
+        "EuropaPlusTV.ru",
+        "MuzTV.ru",
+        "FashionTVEurope.fr"
+      ]
+    },
+    {
+      "id": "radio",
+      "name": "Radio",
+      "_note": "stații de pe radio-browser.info, alese după nume + țară, cea mai votată",
+      "stations": [
+        {
+          "name": "Vanilla Radio Smooth Flavors",
+          "cc": "GR",
+          "display": "Vanilla Radio Smooth"
+        },
+        {
+          "name": "Vanilla Radio.com - Fresh Flavours",
+          "cc": "GR",
+          "display": "Vanilla Radio Fresh"
+        },
+        {
+          "name": "Vanilla Radio Deep Flavors",
+          "cc": "GR",
+          "display": "Vanilla Radio Deep"
+        },
+        {
+          "name": "Radio ZU",
+          "cc": "RO"
+        },
+        {
+          "name": "Kiss FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Europa FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Digi FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Pro FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Magic FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Rock FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Virgin Radio",
+          "cc": "RO"
+        },
+        {
+          "name": "Radio Guerrilla",
+          "cc": "RO"
+        },
+        {
+          "name": "Radio Impuls",
+          "cc": "RO"
+        },
+        {
+          "name": "National FM",
+          "cc": "RO"
+        },
+        {
+          "name": "Radio Romania Actualitati",
+          "cc": "RO"
+        },
+        {
+          "name": "Radio Romania Muzical",
+          "cc": "RO"
+        },
+        {
+          "name": "Radio Contact",
+          "cc": "BE"
+        },
+        {
+          "name": "Bel RTL",
+          "cc": "BE"
+        },
+        {
+          "name": "NRJ",
+          "cc": "BE",
+          "display": "NRJ Belgique"
+        },
+        {
+          "name": "Nostalgie",
+          "cc": "BE",
+          "display": "Nostalgie Belgique"
+        },
+        {
+          "name": "Fun Radio",
+          "cc": "BE",
+          "display": "Fun Radio Belgique"
+        },
+        {
+          "name": "La Premiere",
+          "cc": "BE",
+          "display": "RTBF La Première"
+        },
+        {
+          "name": "VivaCite",
+          "cc": "BE",
+          "display": "RTBF VivaCité"
+        },
+        {
+          "name": "Classic 21",
+          "cc": "BE",
+          "display": "RTBF Classic 21"
+        },
+        {
+          "name": "Pure",
+          "cc": "BE",
+          "display": "RTBF Pure"
+        }
+      ]
+    }
+  ],
+  "defaultFavorites": [
+    "Antena1.ro",
+    "PROTV.ro",
+    "KanalD.ro",
+    "TVR1.ro"
+  ]
+}
