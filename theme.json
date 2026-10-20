@@ -1,29 +1,71 @@
 {
   "format": 1,
-  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves.",
-  "preview": null,
+  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year; or easter = orthodox|western with fromDays/toDays relative to Easter Sunday. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves, petals.",
+  "preview": "easter",
   "themes": [
     {
-      "id": "halloween", "from": "10-25", "to": "10-31",
+      "id": "halloween",
+      "from": "10-25",
+      "to": "10-31",
       "message": "Halloween fericit!",
       "badge": "themes/pumpkin.svg",
       "effect": "bats",
-      "colors": { "bg-0": "#140f19", "bg-1": "#1d1524", "bg-2": "#2a1f33", "panel": "rgba(20, 15, 25, 0.95)", "radio-glow": "#3a2148",
-                  "ink": "#f3e6d6", "sage": "#8a4fb0", "sage-2": "#f08a2a", "yellow": "#f08a2a" }
+      "colors": {
+        "bg-0": "#140f19",
+        "bg-1": "#1d1524",
+        "bg-2": "#2a1f33",
+        "panel": "rgba(20, 15, 25, 0.95)",
+        "radio-glow": "#3a2148",
+        "ink": "#f3e6d6",
+        "sage": "#8a4fb0",
+        "sage-2": "#f08a2a",
+        "yellow": "#f08a2a"
+      }
     },
     {
-      "id": "christmas", "from": "12-15", "to": "01-07",
+      "id": "christmas",
+      "from": "12-15",
+      "to": "01-07",
       "message": "Crăciun fericit!",
       "badge": "themes/tree.svg",
       "effect": "snow",
-      "colors": { "bg-0": "#101a17", "bg-1": "#15231e", "bg-2": "#1d2f28", "panel": "rgba(14, 26, 22, 0.95)", "radio-glow": "#1f3a2c",
-                  "ink": "#f4efe6", "sage": "#2f7d46", "sage-2": "#e2504a", "yellow": "#f4c542" }
+      "colors": {
+        "bg-0": "#101a17",
+        "bg-1": "#15231e",
+        "bg-2": "#1d2f28",
+        "panel": "rgba(14, 26, 22, 0.95)",
+        "radio-glow": "#1f3a2c",
+        "ink": "#f4efe6",
+        "sage": "#2f7d46",
+        "sage-2": "#e2504a",
+        "yellow": "#f4c542"
+      }
     },
     {
-      "id": "1-decembrie", "from": "12-01", "to": "12-01",
+      "id": "1-decembrie",
+      "from": "12-01",
+      "to": "12-01",
       "message": "La mulți ani, România!",
       "effect": "confetti",
-      "colors": { "sage": "#1d4fa8", "sage-2": "#f4c542", "yellow": "#f4c542" }
+      "colors": {
+        "sage": "#1d4fa8",
+        "sage-2": "#f4c542",
+        "yellow": "#f4c542"
+      }
+    },
+    {
+      "id": "easter",
+      "easter": "orthodox",
+      "fromDays": -7,
+      "toDays": 1,
+      "message": "Hristos a înviat!",
+      "badge": "themes/egg.svg",
+      "effect": "petals",
+      "colors": {
+        "sage": "#7fae6e",
+        "sage-2": "#f2b8c6",
+        "yellow": "#f4d35e"
+      }
     }
   ]
 }
