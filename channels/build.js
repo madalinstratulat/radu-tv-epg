@@ -39,6 +39,17 @@ async function load(name) {
   return JSON.parse(fs.readFileSync(file, 'utf8'));
 }
 
+function twitchUsers(logins) {
+  return new Promise((resolve) => {
+    const body = JSON.stringify({ query: 'query($l:[String!]){users(logins:$l){login displayName profileImageURL(width:300)}}', variables: { l: logins } });
+    const req = https.request('https://gql.twitch.tv/gql', { method: 'POST', headers: { 'Client-ID': 'kimne78kx3ncx6brgo4mv6wki5h1ko', 'Content-Type': 'text/plain' } }, res => {
+      const chunks = []; res.on('data', c => chunks.push(c));
+      res.on('end', () => { const out = {}; try { (JSON.parse(Buffer.concat(chunks).toString('utf8')).data.users || []).forEach(u => { if (u) out[u.login] = u; }); } catch (e) {} resolve(out); });
+    });
+    req.on('error', () => resolve({})); req.end(body);
+  });
+}
+
 function qualityOf(s) { const m = /^(\d+)/.exec(s.quality || ''); return m ? parseInt(m[1], 10) : 0; }
 
 // iptv-org points AntenaPlay channels at the lowest variant; the master playlist next to it is adaptive.
@@ -129,7 +140,17 @@ async function main() {
   const out = { format: 1, generated: new Date().toISOString(), defaultFavorites: config.defaultFavorites || [], groups: [] };
   for (const g of config.groups) {
     let items = [];
-    if (g.stations) {
+    if (g.twitch) {
+      // Twitch: display name + profile picture from Twitch's web API; the stream address is resolved on the TV at play time
+      const users = await twitchUsers(g.twitch);
+      for (const login of g.twitch) {
+        const u = users[login.toLowerCase()];
+        if (!u) { console.warn('  skip (twitch user not found): ' + login); continue; }
+        const id = 'twitch:' + u.login, file = safeName(id) + '.png';
+        if (u.profileImageURL) wanted.push({ id, file, urls: [u.profileImageURL] });
+        items.push({ id, name: u.displayName || u.login, logo: fs.existsSync(path.join(LOGO_DIR, file)) ? 'logos/' + file : '', url: '', alt: '', cat: 'twitch', q: '', lang: 'ro', twitch: u.login });
+      }
+    } else if (g.stations) {
       for (const st of g.stations) {
         const r = await radioStation(st);
         if (!r) { console.warn('  skip (radio not found): ' + st.cc + ' ' + st.name); continue; }

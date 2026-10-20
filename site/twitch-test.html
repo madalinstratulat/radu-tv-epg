@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="ro"><head><meta charset="utf-8"><title>Twitch test</title>
+<style>html,body{margin:0;width:1920px;height:1080px;background:#000;overflow:hidden;color:#ecdfcc;font:28px Arial,sans-serif}
+#p{position:absolute;inset:0;width:1920px;height:1080px;border:0}#log{position:absolute;left:30px;top:20px;z-index:2;background:rgba(0,0,0,.6);padding:8px 16px;border-radius:8px}</style></head>
+<body><div id="log">Twitch test · faiar · Chromium <span id="v"></span></div>
+<iframe id="p" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<script>
+document.getElementById('v').textContent = (/Chrome\/(\d+)/.exec(navigator.userAgent) || [])[1] || '?';
+document.getElementById('p').src = 'https://player.twitch.tv/?channel=faiar&parent=' + location.hostname + '&autoplay=true&muted=false';
+setTimeout(function () { document.getElementById('log').style.display = 'none'; }, 8000);
+</script></body></html>

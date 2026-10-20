@@ -41,6 +41,7 @@ def probe(url):
     return 'TEMP', f'HTTP {code} {ctype}'.strip()
 
 def check(ch):
+    if ch.get('twitch'): return ch, 'OK', 'twitch (resolved on the TV)'
     st, why = probe(ch['url'])
     if st != 'OK' and ch['alt']:
         st2, why2 = probe(ch['alt'])
