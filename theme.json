@@ -1,8 +1,46 @@
 {
   "format": 1,
-  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year; or easter = orthodox|western with fromDays/toDays relative to Easter Sunday. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves, petals, eggs, balloons, flowers.",
+  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year; or dates = [YYYY-MM-DD, ...] for one-off days (matches), or easter = orthodox|western with fromDays/toDays relative to Easter Sunday. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves, petals, eggs, balloons, flowers.",
   "preview": "8-martie",
   "themes": [
+    {
+      "id": "meci-ro-pol",
+      "dates": [
+        "2026-11-14"
+      ],
+      "message": "Hai România! Azi: România – Polonia",
+      "badge": "themes/ball.svg",
+      "effect": "confetti",
+      "effectColors": [
+        "#002b7f",
+        "#fcd116",
+        "#ce1126"
+      ],
+      "colors": {
+        "sage": "#002b7f",
+        "sage-2": "#fcd116",
+        "yellow": "#fcd116"
+      }
+    },
+    {
+      "id": "meci-bih-ro",
+      "dates": [
+        "2026-11-17"
+      ],
+      "message": "Hai România! Azi: Bosnia – România",
+      "badge": "themes/ball.svg",
+      "effect": "confetti",
+      "effectColors": [
+        "#002b7f",
+        "#fcd116",
+        "#ce1126"
+      ],
+      "colors": {
+        "sage": "#002b7f",
+        "sage-2": "#fcd116",
+        "yellow": "#fcd116"
+      }
+    },
     {
       "id": "halloween",
       "from": "10-25",
