@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuilds channels.json: iptv-org channel id -> sources, matched by name against the app's channel list
+"""Rebuilds epg.channels.json: iptv-org channel id -> guide sources, matched by name against the app's channel list
 (../LgIptv/app/channels.js) and the XMLTV channel lists saved by epg.py --names. Keeps the existing api/ptv slugs.
 Usage: python3 map.py <dir with RO1.names.json FR1.names.json BE2.names.json>"""
 import json, re, sys, unicodedata, os
@@ -15,7 +15,7 @@ MANUAL = {'PROTVChisinau.md': 'IPTVX#pro-tv-md', 'TV8.md': 'IPTVX#tv8-md', 'Mold
 NOT = {'MagicTV.ro', 'PROTVChisinau.md'}   # Magic.be is a different station; PRO TV Chisinau has its own schedule
 src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'LgIptv', 'app', 'channels.js'), encoding='utf-8').read()
 app = json.loads(src[src.index('{'):src.rindex('}') + 1])
-old = json.load(open('channels.json', encoding='utf-8'))
+old = json.load(open('epg.channels.json', encoding='utf-8'))
 names = {f: json.load(open(os.path.join(sys.argv[1], f + '.names.json'), encoding='utf-8')) for f in ['RO1', 'FR1', 'IPTVX']}
 out = {}
 for g in app['groups']:
@@ -29,5 +29,5 @@ for g in app['groups']:
                 cands = [cid for cid, (n, cnt) in names[f].items() if cnt > 0 and norm(n) == norm(c['name'])]
                 if cands: e['xmltv'] = f + '#' + sorted(cands, key=lambda x: ('.HD.' in x, x.count('.'), x))[0]; break
         if e: out[c['id']] = e
-json.dump(out, open('channels.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+json.dump(out, open('epg.channels.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(len(out), 'canale;', sum('xmltv' in e for e in out.values()), 'xmltv,', sum('api' in e for e in out.values()), 'api')

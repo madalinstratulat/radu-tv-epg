@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Builds epg.json for Radu TV: the schedule of every mapped channel for today and tomorrow (Romanian calendar),
 as [[start_epoch_minutes, title], ...] in UTC - the TV converts to wherever it is. Runs once a day in GitHub Actions.
-Sources, in order per channel (channels.json: iptv-org id -> {xmltv, api, ptv}):
+Sources, in order per channel (epg.channels.json: iptv-org id -> {xmltv, api, ptv}; channels.json is the channel LIST built by channels/build.js):
   xmltv: XMLTV files (FILE#channel_id): epgshare01.online RO1/FR1 (RO, FR), iptvx.one (MD); several days ahead, absolute times
   api:   the JSON API behind programtv.ro (mirror of cinemagia; cinemagia itself blocks datacenter IPs), one day per call
   ptv:   program-tv.ro channel pages (own data; 403 from GitHub, works from a home connection)
@@ -109,7 +109,7 @@ def main():
                 elif el.tag == 'programme': cnt[el.get('channel')] = cnt.get(el.get('channel'), 0) + 1; el.clear()
             json.dump({k: [v, cnt.get(k, 0)] for k, v in names.items()}, open(os.path.join(d, f + '.names.json'), 'w', encoding='utf-8'), ensure_ascii=False)
         return
-    chans = json.load(open('channels.json', encoding='utf-8'))
+    chans = json.load(open('epg.channels.json', encoding='utf-8'))
     for src in chans.values():                         # fetch the xmltv files first, sequentially (they are big)
         if src.get('xmltv'): xmltv_file(src['xmltv'].split('#')[0])
     from concurrent.futures import ThreadPoolExecutor
