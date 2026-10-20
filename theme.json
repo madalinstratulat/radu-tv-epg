@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year; or easter = orthodox|western with fromDays/toDays relative to Easter Sunday. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves, petals.",
+  "_note": "Seasonal looks for every Radu TV app (webOS, Tizen, Android). Data only: each app maps it onto its own UI. from/to = MM-DD in the viewer's local time, inclusive, may wrap the new year; or easter = orthodox|western with fromDays/toDays relative to Easter Sunday. preview = theme id shown now regardless of dates (null = by date). Effects: snow, bats, confetti, leaves, petals, eggs.",
   "preview": "easter",
   "themes": [
     {
@@ -58,9 +58,9 @@
       "easter": "orthodox",
       "fromDays": -7,
       "toDays": 1,
-      "message": "Hristos a înviat!",
+      "message": "Paște fericit!",
       "badge": "themes/egg.svg",
-      "effect": "petals",
+      "effect": "eggs",
       "colors": {
         "sage": "#7fae6e",
         "sage-2": "#f2b8c6",
