@@ -1,7 +1,10 @@
 name: epg
 on:
   schedule:
-    - cron: '15 2 * * *'     # daily 02:15 UTC (05:15 Romania)
+    # GitHub often starts scheduled runs hours late or skips them: three tries a night, extra runs just find no change
+    - cron: '15 0 * * *'
+    - cron: '15 2 * * *'
+    - cron: '15 4 * * *'
   workflow_dispatch:
 permissions:
   contents: write

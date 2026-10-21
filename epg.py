@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds epg.json for Radu TV: the schedule of every mapped channel for today and tomorrow (Romanian calendar),
+"""Builds epg.json for Radu TV: the schedule of every mapped channel for today and the next two days (Romanian calendar),
 as [[start_epoch_minutes, title], ...] in UTC - the TV converts to wherever it is. Runs once a day in GitHub Actions.
 Sources, in order per channel (epg.channels.json: iptv-org id -> {xmltv, api, ptv}; channels.json is the channel LIST built by channels/build.js):
   xmltv: XMLTV files (FILE#channel_id): epgshare01.online RO1/FR1 (RO, FR), iptvx.one (MD); several days ahead, absolute times
@@ -64,7 +64,7 @@ def ro_abs(day, rows):
 
 def from_api(slug):
     out = []
-    for day in (DAY0, DAY0 + timedelta(days=1)):
+    for day in (DAY0, DAY0 + timedelta(days=1), DAY0 + timedelta(days=2)):
         rows = json.loads(get(f'https://programtv.ro/api/tv-program/{urllib.parse.quote(slug)}?date={day:%Y-%m-%d}&isToday=true', 'application/json'))
         items = []
         for r in rows:
@@ -99,7 +99,7 @@ def main():
     global DAY0, WIN0, WIN1
     now = datetime.now(RO); DAY0 = now.date()
     start = datetime.combine(DAY0, datetime.min.time(), RO)
-    WIN0 = int(start.timestamp() // 60); WIN1 = int((start + timedelta(days=2)).timestamp() // 60)   # today + tomorrow (RO)
+    WIN0 = int(start.timestamp() // 60); WIN1 = int((start + timedelta(days=3)).timestamp() // 60)   # today + 2 days (RO): a late or skipped run never shows on the TV
     if '--names' in sys.argv:
         d = sys.argv[sys.argv.index('--names') + 1]; os.makedirs(d, exist_ok=True)
         for f in XMLTV_URLS:
