@@ -29,6 +29,15 @@ table{width:100%;border-collapse:collapse;font-size:16px}
 td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
 td:first-child{white-space:nowrap;padding-right:14px;font-weight:700;color:var(--sage)}
 a{color:var(--sage)}
+.app{display:inline-block;white-space:nowrap;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 6px;font-weight:700;color:var(--ink);line-height:1.5}
+.app::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c,var(--sage))}
+.app.gp{--c:#4fa3e0}
+.app.dl::before,.app.rt::before{display:none}
+.app img{width:17px;height:17px;border-radius:4px;margin-right:6px;vertical-align:-3px}
+.nw{white-space:nowrap}
+.appcard{display:inline-flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 16px 10px 10px;margin:12px 0 2px}
+.appcard img{width:56px;height:56px;border-radius:12px;margin-right:14px}
+.appcard b{display:block;font-size:19px}.appcard small{color:var(--ink3);font-size:14px}
 </style></head>
 <body><main>
 <h1>Radu TV</h1>
@@ -36,8 +45,9 @@ a{color:var(--sage)}
 
 <h2>Instalare (durează 3–4 minute, o singură dată)</h2>
 <ol class="steps">
-<li><b>Instalează aplicația Downloader.</b> Pe televizor, deschide <b>Google Play</b> (sau caută cu butonul de microfon), scrie „Downloader” și instalează aplicația cu sigla portocalie, de la <b>AFTVnews</b>. E gratuită.</li>
-<li><b>Deschide Downloader.</b> La prima pornire te întreabă dacă îi permiți acces la fișiere: alege <b>Permite</b>. Închide eventualele mesaje de bun venit.</li>
+<li><b>Instalează aplicația <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br>Pe televizor deschide <span class="nw"><span class="app gp">Google Play</span>,</span> caută „Downloader” (poți folosi și butonul de microfon) și instalează aplicația cu sigla de mai jos. E gratuită.
+  <div><div class="appcard"><img src="img/downloader.png" alt="Downloader"><div><b>Downloader</b><small>de la AFTVnews · gratuită</small></div></div></div></li>
+<li><b>Deschide <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br> La prima pornire te întreabă dacă îi permiți acces la fișiere: alege <b>Permite</b>. Închide eventualele mesaje de bun venit.</li>
 <li><b>Scrie codul sau adresa</b> în câmpul de sus și apasă <b>Go</b>:
   <div class="codes">
     <div class="tile"><small>Cod</small><span class="big">3204554</span></div>
@@ -45,21 +55,21 @@ a{color:var(--sage)}
     <div class="tile"><small>Adresă</small><span class="url">radu-tv.pages.dev/apk</span></div>
   </div>
   </li>
-<li><b>Permite instalarea.</b> Televizorul spune că nu are voie să instaleze aplicații din Downloader. Apasă <b>Setări</b>, pornește comutatorul pentru Downloader, apoi revino cu <b>BACK</b>.
+<li><b>Permite instalarea.</b> Televizorul spune că nu are voie să instaleze aplicații din <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>.</span> Apasă <b>Setări</b>, pornește comutatorul pentru <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>,</span> apoi revino cu <b>BACK</b>.
   <div class="note">Dacă nu apare deloc opțiunea, vezi mai jos „Dacă nu merge”.</div></li>
-<li><b>Apasă Instalează</b>, apoi <b>Gata</b>. Downloader întreabă dacă șterge fișierul descărcat: alege <b>Șterge</b>, nu mai e nevoie de el.</li>
+<li><b>Apasă Instalează</b>, apoi <b>Gata</b>. <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span> întreabă dacă șterge fișierul descărcat: alege <b>Șterge</b>, nu mai e nevoie de el.</li>
 <li><b>Pornește Radu TV</b> din lista de aplicații a televizorului. Pe Google TV o găsești la <span class="path">Aplicații → Aplicațiile tale</span>. Poți să o muți pe ecranul principal ținând apăsat OK pe ea.</li>
 </ol>
 
 <div class="box"><h3>După instalare</h3>
-<p>Poți dezinstala Downloader sau îi poți lua înapoi permisiunea de instalare. Radu TV nu mai are nevoie de el.</p>
-<p><b>Actualizări:</b> când apare o versiune nouă, Radu TV te întreabă singur. Apeși OK. Prima dată, televizorul cere permisiunea de instalare și pentru Radu TV: pornește comutatorul și revino cu BACK. Instalarea continuă singură.</p></div>
+<p>Poți dezinstala <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span> sau îi poți lua înapoi permisiunea de instalare. <span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span> nu mai are nevoie de el.</p>
+<p><b>Actualizări:</b> când apare o versiune nouă, <span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span> te întreabă singur. Apeși OK. Prima dată, televizorul cere permisiunea de instalare și pentru <span class="nw"><span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span>:</span> pornește comutatorul și revino cu BACK. Instalarea continuă singură.</p></div>
 
 <h2>Dacă nu merge</h2>
 <div class="box"><h3>Nu găsesc opțiunea „Surse necunoscute”</h3>
 <p>Pe televizoarele Google TV mai noi, opțiunea e ascunsă. Activează întâi modul dezvoltator:</p>
 <p><span class="path">Setări → Sistem → Despre</span>, coboară la <b>Android TV OS build</b> și apasă OK de 7 ori, până apare „Ești dezvoltator”.</p>
-<p>Apoi: <span class="path">Setări → Aplicații → Securitate și restricții → Surse necunoscute</span> și pornește Downloader.</p></div>
+<p>Apoi: <span class="path">Setări → Aplicații → Securitate și restricții → Surse necunoscute</span> și pornește <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>.</span></p></div>
 <div class="box"><h3>Downloader nu găsește codul</h3>
 <p>Verifică cifrele: <b>3204554</b>. Sau scrie adresa <b>radu-tv.pages.dev/apk</b>.</p></div>
 
