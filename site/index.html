@@ -2,26 +2,75 @@
 <html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radu TV</title>
 <style>
-:root{--bg:#191b17;--panel:#21231e;--ink:#ecdfcc;--ink2:rgba(236,223,204,.7);--sage:#a3ad93;--line:rgba(236,223,204,.14)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-main{max-width:640px;margin:0 auto;padding:40px 16px 60px}h1{font-size:30px;margin:0 0 4px}p.sub{color:var(--ink2);margin:0 0 28px}
-ol{padding-left:22px}li{margin:0 0 14px}code{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:2px 8px;font-size:16px;color:var(--sage)}
-.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:24px 0}.box h2{font-size:18px;margin:0 0 8px}
+:root{--bg:#191b17;--panel:#21231e;--panel2:#292b26;--ink:#ecdfcc;--ink2:rgba(236,223,204,.72);--ink3:rgba(236,223,204,.5);--sage:#a3ad93;--line:rgba(236,223,204,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:36px 16px 64px}
+h1{font-size:32px;margin:0;letter-spacing:.5px}
+.sub{color:var(--ink2);margin:6px 0 28px}
+h2{font-size:20px;margin:36px 0 14px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--sage);color:var(--bg);font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps>li:not(:last-child)::after{content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--line)}
+.steps b{color:var(--ink)}
+.note{color:var(--ink3);font-size:15px;margin-top:4px}
+.codes{display:flex;flex-wrap:wrap;margin:12px 0 2px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:0 10px 10px 0}
+.tile small{display:block;color:var(--ink3);font-size:13px;text-transform:uppercase;letter-spacing:1.5px}
+.tile .big{font-size:34px;font-weight:800;letter-spacing:4px;color:var(--sage);white-space:nowrap}
+.tile .url{font-size:20px;font-weight:700;color:var(--sage);white-space:nowrap}
+.or{align-self:center;color:var(--ink3);margin:0 10px 10px 0}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:14px 0}
+.box h3{margin:0 0 6px;font-size:17px}
+.box p{margin:6px 0;color:var(--ink2)}
+.path{white-space:nowrap;background:var(--panel2);border-radius:6px;padding:1px 7px;font-size:15px;color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:16px}
+td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{white-space:nowrap;padding-right:14px;font-weight:700;color:var(--sage)}
 a{color:var(--sage)}
 </style></head>
 <body><main>
 <h1>Radu TV</h1>
-<p class="sub">Pentru televizoare Android TV și Google TV (Sony, Philips, TCL, Xiaomi, Chromecast cu Google TV, Google TV Streamer).</p>
-<div class="box"><h2>Instalare (o singură dată)</h2>
-<ol>
-<li>Pe televizor, deschide <b>Google Play</b> și instalează aplicația gratuită <b>Downloader</b> (de AFTVnews).</li>
-<li>Deschide Downloader și scrie codul <code style="font-size:20px;letter-spacing:2px">3204554</code> sau adresa <code>radu-tv.pages.dev/apk</code>, apoi <b>Go</b>.</li>
-<li>Când televizorul întreabă, permite instalarea din Downloader („Surse necunoscute”), apoi alege <b>Instalează</b>. Dacă nu apare opțiunea (unele televizoare Google TV mai noi o ascund): <b>Setări → Sistem → Despre</b>, apasă de 7 ori pe <b>Android TV OS build</b> ca să activezi modul dezvoltator, apoi încearcă din nou.</li>
-<li>Radu TV apare în lista de aplicații. Downloader îl poți șterge.</li>
-</ol></div>
-<div class="box"><h2>Actualizări</h2>
-<p>Aplicația verifică singură dacă există o versiune nouă și te întreabă. Apeși OK și se instalează. Prima dată, televizorul cere o permisiune pentru Radu TV.</p></div>
-<div class="box"><h2>Telecomanda</h2>
-<p>Săgeți: lista și categoriile · OK: pornește canalul · <b>ține apăsat OK</b>: meniu (favorite, program, stinge ecranul) · BACK: închide lista. Dacă telecomanda are cifre, CH sau butoane colorate, merg și ele ca scurtături.</p></div>
-<p class="sub">Descărcare directă: <a href="/apk">ultima versiune</a></p>
+<p class="sub">Televiziune românească și radio pe televizoarele cu <b>Android TV</b> sau <b>Google TV</b>: Sony, Philips, TCL, Xiaomi, Hisense, Chromecast cu Google TV, Google TV Streamer. Pe un televizor LG sau Samsung merge cu un stick Google TV conectat la HDMI.</p>
+
+<h2>Instalare (durează 3–4 minute, o singură dată)</h2>
+<ol class="steps">
+<li><b>Instalează aplicația Downloader.</b> Pe televizor, deschide <b>Google Play</b> (sau caută cu butonul de microfon), scrie „Downloader” și instalează aplicația cu sigla portocalie, de la <b>AFTVnews</b>. E gratuită.</li>
+<li><b>Deschide Downloader.</b> La prima pornire te întreabă dacă îi permiți acces la fișiere: alege <b>Permite</b>. Închide eventualele mesaje de bun venit.</li>
+<li><b>Scrie codul sau adresa</b> în câmpul de sus și apasă <b>Go</b>:
+  <div class="codes">
+    <div class="tile"><small>Cod</small><span class="big">3204554</span></div>
+    <span class="or">sau</span>
+    <div class="tile"><small>Adresă</small><span class="url">radu-tv.pages.dev/apk</span></div>
+  </div>
+  <div class="note">Codul e mai ușor de tastat cu telecomanda.</div></li>
+<li><b>Permite instalarea.</b> Televizorul spune că nu are voie să instaleze aplicații din Downloader. Apasă <b>Setări</b>, pornește comutatorul pentru Downloader, apoi revino cu <b>BACK</b>.
+  <div class="note">Dacă nu apare deloc opțiunea, vezi mai jos „Dacă nu merge”.</div></li>
+<li><b>Apasă Instalează</b>, apoi <b>Gata</b>. Downloader întreabă dacă șterge fișierul descărcat: alege <b>Șterge</b>, nu mai e nevoie de el.</li>
+<li><b>Pornește Radu TV</b> din lista de aplicații a televizorului. Pe Google TV o găsești la <span class="path">Aplicații → Aplicațiile tale</span>. Poți să o muți pe ecranul principal ținând apăsat OK pe ea.</li>
+</ol>
+
+<div class="box"><h3>După instalare</h3>
+<p>Poți dezinstala Downloader sau îi poți lua înapoi permisiunea de instalare. Radu TV nu mai are nevoie de el.</p>
+<p><b>Actualizări:</b> când apare o versiune nouă, Radu TV te întreabă singur. Apeși OK. Prima dată, televizorul cere permisiunea de instalare și pentru Radu TV: pornește comutatorul și revino cu BACK. Instalarea continuă singură.</p></div>
+
+<h2>Dacă nu merge</h2>
+<div class="box"><h3>Nu găsesc opțiunea „Surse necunoscute”</h3>
+<p>Pe televizoarele Google TV mai noi, opțiunea e ascunsă. Activează întâi modul dezvoltator:</p>
+<p><span class="path">Setări → Sistem → Despre</span>, coboară la <b>Android TV OS build</b> și apasă OK de 7 ori, până apare „Ești dezvoltator”.</p>
+<p>Apoi: <span class="path">Setări → Aplicații → Securitate și restricții → Surse necunoscute</span> și pornește Downloader.</p></div>
+<div class="box"><h3>Downloader nu găsește codul</h3>
+<p>Verifică cifrele: <b>3204554</b>. Sau scrie adresa <b>radu-tv.pages.dev/apk</b>.</p></div>
+
+<h2>Telecomanda</h2>
+<table>
+<tr><td>Săgeți</td><td>Deschid lista. Sus/jos: canalul, stânga/dreapta: categoria</td></tr>
+<tr><td>OK</td><td>Pornește canalul selectat</td></tr>
+<tr><td>Ține apăsat OK</td><td>Meniu: favorite, programul canalului, stinge ecranul</td></tr>
+<tr><td>BACK</td><td>Închide sau deschide lista</td></tr>
+<tr><td>Cifre, CH, culori</td><td>Scurtături, dacă telecomanda le are</td></tr>
+</table>
+
+<p class="sub" style="margin-top:28px">Descărcare directă: <a href="/apk">ultima versiune</a></p>
 </main></body></html>
