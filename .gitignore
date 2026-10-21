@@ -1,2 +1,3 @@
 channels/cache/
 __pycache__/
+site/android/*.apk

@@ -1,0 +1,14 @@
+{
+  "stable": {
+    "versionCode": 2,
+    "versionName": "0.1.1",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.1.apk",
+    "notes": "Instalarea continuă singură după permisiune; mesaj când Twitch e offline"
+  },
+  "test": {
+    "versionCode": 2,
+    "versionName": "0.1.1",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.1.apk",
+    "notes": "Test: instalarea continuă singură după permisiune; mesaj când Twitch e offline"
+  }
+}
