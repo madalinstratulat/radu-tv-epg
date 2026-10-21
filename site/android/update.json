@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 6,
-    "versionName": "0.1.5",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.5.apk",
-    "notes": "Actualizările sunt verificate cu amprenta publicată pe GitHub"
+    "versionCode": 7,
+    "versionName": "0.1.6",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.6.apk",
+    "notes": "Meniul (ține apăsat OK) are acum «Caută actualizări» și reoferă o actualizare amânată"
   },
   "test": {
-    "versionCode": 6,
-    "versionName": "0.1.5",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.5.apk",
-    "notes": "Test verificare amprentă"
+    "versionCode": 7,
+    "versionName": "0.1.6",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.6.apk",
+    "notes": "Meniul (ține apăsat OK) are acum «Caută actualizări» și reoferă o actualizare amânată"
   }
 }
