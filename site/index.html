@@ -11,7 +11,7 @@ h1.brand{display:flex;align-items:center}h1.brand img{width:52px;height:52px;bor
 .sub{color:var(--ink2);margin:6px 0 28px}
 h2{font-size:20px;margin:36px 0 14px}
 .steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px}
+.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px;line-height:1.85}
 .steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--sage);color:var(--bg);font-weight:800;display:flex;align-items:center;justify-content:center}
 .steps>li:not(:last-child)::after{content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--line)}
 .steps b{color:var(--ink)}
@@ -30,7 +30,7 @@ table{width:100%;border-collapse:collapse;font-size:16px}
 td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
 td:first-child{white-space:nowrap;padding-right:14px;font-weight:700;color:var(--sage)}
 a{color:var(--sage)}
-.app{display:inline-block;white-space:nowrap;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 6px;font-weight:700;color:var(--ink);line-height:1.5}
+.app{display:inline-block;margin:2px 0;white-space:nowrap;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 6px;font-weight:700;color:var(--ink);line-height:1.5}
 .app::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c,var(--sage))}
 .app.gp{--c:#4fa3e0}
 .app.dl::before,.app.rt::before{display:none}
@@ -46,7 +46,7 @@ a{color:var(--sage)}
 
 <h2>Instalare (durează 3–4 minute, o singură dată)</h2>
 <ol class="steps">
-<li><b>Instalează aplicația <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br>Pe televizor deschide <span class="nw"><span class="app gp">Google Play</span>,</span> caută „Downloader” (poți folosi și butonul de microfon) și instalează aplicația cu sigla de mai jos. E gratuită.
+<li><b>Instalează aplicația Downloader</b><br>Pe televizor deschide <span class="nw"><span class="app gp">Google Play</span>,</span> caută „Downloader” (poți folosi și butonul de microfon) și instalează aplicația cu sigla de mai jos. E gratuită.
   <div><div class="appcard"><img src="img/downloader.png" alt="Downloader"><div><b>Downloader</b><small>de la AFTVnews · gratuită</small></div></div></div></li>
 <li><b>Deschide <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br> La prima pornire te întreabă dacă îi permiți acces la fișiere: alege <b>Permite</b>. Închide eventualele mesaje de bun venit.</li>
 <li><b>Scrie codul sau adresa</b> în câmpul de sus și apasă <b>Go</b>:
