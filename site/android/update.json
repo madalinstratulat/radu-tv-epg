@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 2,
-    "versionName": "0.1.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.1.apk",
-    "notes": "Instalarea continuă singură după permisiune; mesaj când Twitch e offline"
+    "versionCode": 3,
+    "versionName": "0.1.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.2.apk",
+    "notes": "Ține apăsat OK pentru meniu (favorite, program, mutare, stinge ecranul); programul pe 3 zile; ecranul de radio se stinge singur"
   },
   "test": {
-    "versionCode": 2,
-    "versionName": "0.1.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.1.apk",
-    "notes": "Test: instalarea continuă singură după permisiune; mesaj când Twitch e offline"
+    "versionCode": 3,
+    "versionName": "0.1.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.1.2.apk",
+    "notes": "Ține apăsat OK pentru meniu (favorite, program, mutare, stinge ecranul); programul pe 3 zile; ecranul de radio se stinge singur"
   }
 }
