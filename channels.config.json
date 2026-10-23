@@ -14,12 +14,9 @@
         "NationalGeographic.ro",
         "Nickelodeon.ro",
         "Nicktoons.ro",
-        "QubTV.ro",
         "RadioRomania3Net.ro",
+        "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
-        "RealitateaPlus.ro",
-        "RealitateaSportiva.ro",
-        "RealitateaStar.ro",
         "TimelessDiziChannel.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
@@ -175,7 +172,7 @@
         "Bashkortostan24.ru",
         "Kavkaz24.ru",
         "Kino24.ru",
-        "OSN.ru",
+        "Patriot.ru",
         "Samara24.ru",
         "SetantaSports1.ru",
         "SetantaSports2.ru",
@@ -223,7 +220,6 @@
           "name": "France 24 Français"
         },
         "TV5MondeInfo.fr",
-        "TV5MondeFranceBelgiumSwitzerlandMonaco.fr",
         "BFMBusiness.fr"
       ]
     },
