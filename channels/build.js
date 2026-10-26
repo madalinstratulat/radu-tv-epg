@@ -172,7 +172,6 @@ async function main() {
       for (const c of channels) {
         if (c.country !== g.country) continue;
         if (g.exclude && g.exclude.includes(c.id)) continue;
-        if (g.blocked && g.blocked.includes(c.id)) continue;   // unofficial restreams: kept out for good, recheck-excluded never revives them
         if (ex && ex.test(c.name)) continue;
         if (g.languages && !languagesOf(c.id).some(l => g.languages.includes(l))) continue;
         if (g.categories && !c.categories.some(cat => g.categories.includes(cat))) continue;

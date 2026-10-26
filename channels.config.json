@@ -51,23 +51,7 @@
           "url": "https://hls02ns.antenaplay.ro/hls/travel-mix-hd/index.m3u8",
           "q": "720p"
         }
-      },
-      "blocked": [
-        "BollywoodFilm.ro",
-        "BollywoodHD.ro",
-        "DisneyChannel.ro",
-        "MoozDance.ro",
-        "MoozHits.ro",
-        "MoozLove.ro",
-        "MoozRetro.ro",
-        "MoozRo.ro",
-        "NationalGeographicWild.ro",
-        "QuantumTV.ro",
-        "SportExtra.ro",
-        "TVPaprika.ro",
-        "UTV.ro",
-        "VoyoSport1.ro"
-      ]
+      }
     },
     {
       "id": "md",
