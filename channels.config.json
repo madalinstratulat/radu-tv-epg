@@ -21,6 +21,52 @@
         "ViasatExplore.ro",
         "ViasatHistory.ro",
         "ViasatNature.ro"
+      ],
+      "urls": {
+        "BollywoodClassic.ro": {
+          "url": "https://hls02ns.antenaplay.ro/hls/bollywood-sd/index.m3u8",
+          "q": "576p"
+        },
+        "CineWow.ro": {
+          "url": "https://hls02ns.antenaplay.ro/hls/bollywood-clasic-sd/index.m3u8",
+          "q": "576p"
+        },
+        "Digi24.ro": {
+          "url": "https://edge-ar.rcs-rds.ro/digi24ar/index.m3u8",
+          "q": "720p"
+        },
+        "EMITV.ro": {
+          "url": "https://astra.emitv.ro/hls/emi/index.m3u8",
+          "q": "1080p"
+        },
+        "HelloTaste.ro": {
+          "url": "https://live77cdn2.antenaplay.ro/live2_fast/ch5/stream.m3u8",
+          "q": "720p"
+        },
+        "TraLaLaDSN.ro": {
+          "url": "https://hls01ns.antenaplay.ro/hls/tralala-desene-animate-hd/index.m3u8",
+          "q": "720p"
+        },
+        "TravelMix.ro": {
+          "url": "https://hls02ns.antenaplay.ro/hls/travel-mix-hd/index.m3u8",
+          "q": "720p"
+        }
+      },
+      "blocked": [
+        "BollywoodFilm.ro",
+        "BollywoodHD.ro",
+        "DisneyChannel.ro",
+        "MoozDance.ro",
+        "MoozHits.ro",
+        "MoozLove.ro",
+        "MoozRetro.ro",
+        "MoozRo.ro",
+        "NationalGeographicWild.ro",
+        "QuantumTV.ro",
+        "SportExtra.ro",
+        "TVPaprika.ro",
+        "UTV.ro",
+        "VoyoSport1.ro"
       ]
     },
     {

@@ -1,3 +1,6 @@
 channels/cache/
 __pycache__/
 site/android/*.apk
+site/windows/*.exe
+site/mac/*.zip
+lg-store/

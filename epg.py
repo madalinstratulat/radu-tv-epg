@@ -80,6 +80,9 @@ def from_ptv(code):
 
 # ---- main --------------------------------------------------------------------------------------------------------
 def grab(cid, src):
+    # A source that stops before tomorrow 06:00 RO is stale (epgshare served such a file all morning on 24 Oct 2026):
+    # keep it only if no later source reaches further.
+    best = []
     for name, fn in (('xmltv', from_xmltv), ('api', from_api), ('ptv', from_ptv)):
         if not src.get(name): continue
         for attempt in range(3):
@@ -89,11 +92,13 @@ def grab(cid, src):
                     items.sort(); dedup = []
                     for p in items:
                         if not dedup or p[0] != dedup[-1][0]: dedup.append(p)
-                    return dedup
+                    if not best or dedup[-1][0] > best[-1][0]: best = dedup
+                    if best[-1][0] >= WIN0 + 30 * 60: return best
                 break
             except Exception as e:
                 time.sleep(3 * (attempt + 1)); print('retry', cid, name, e, file=sys.stderr)
-    return []
+    if best: print('short', cid, file=sys.stderr)
+    return best
 
 def main():
     global DAY0, WIN0, WIN1

@@ -172,6 +172,7 @@ async function main() {
       for (const c of channels) {
         if (c.country !== g.country) continue;
         if (g.exclude && g.exclude.includes(c.id)) continue;
+        if (g.blocked && g.blocked.includes(c.id)) continue;   // unofficial restreams: kept out for good, recheck-excluded never revives them
         if (ex && ex.test(c.name)) continue;
         if (g.languages && !languagesOf(c.id).some(l => g.languages.includes(l))) continue;
         if (g.categories && !c.categories.some(cat => g.categories.includes(cat))) continue;
@@ -184,6 +185,11 @@ async function main() {
         const rank = new Map(g.first.map((id, i) => [id, i]));
         items.sort((a, b) => (rank.has(a.id) ? rank.get(a.id) : 1e9) - (rank.has(b.id) ? rank.get(b.id) : 1e9));
       }
+    }
+    // Manual primary stream ("urls": {id: {url, q}}) where iptv-org's first pick is dead; that pick becomes the fallback.
+    if (g.urls) for (const e of items) {
+      const o = g.urls[e.id];
+      if (o && o.url !== e.url) { e.alt = e.url; e.url = o.url; e.q = o.q || ''; }
     }
     out.groups.push({ id: g.id, name: g.name, channels: items });
     console.log(g.name + ': ' + items.length + ' canale');
