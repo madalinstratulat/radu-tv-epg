@@ -1,2 +1,4 @@
 /apk /android/RaduTV-0.1.6.apk 302
-/win /windows/RaduTV-0.1.0.exe 302
+/win /windows/RaduTV-0.1.1.exe 302
+/dl-mac /mac/RaduTV-mac-arm64-0.1.1.zip 302
+/dl-mac-intel /mac/RaduTV-mac-x64-0.1.1.zip 302

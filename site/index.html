@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ro" data-p="tv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Radu TV</title>
-<meta name="description" content="Televiziune românească și radio pe Android TV și Google TV. Instalare cu codul 3204554 în aplicația Downloader.">
+<meta name="description" content="Televiziune românească și radio pe Android TV, Google TV, Windows și Mac. Instalare cu codul 3204554 în aplicația Downloader.">
+<meta name="theme-color" content="#121410">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://radu-tv.pages.dev/">
 <meta property="og:site_name" content="Radu TV">
 <meta property="og:title" content="Radu TV">
-<meta property="og:description" content="Televiziune românească și radio pe Android TV și Google TV. Instalare cu codul 3204554 în aplicația Downloader.">
+<meta property="og:description" content="Televiziune românească și radio pe Android TV, Google TV, Windows și Mac. Instalare cu codul 3204554 în aplicația Downloader.">
 <meta property="og:image" content="https://radu-tv.pages.dev/img/og.png?v=4">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -15,89 +16,418 @@
 <meta name="twitter:image" content="https://radu-tv.pages.dev/img/og.png?v=4">
 <link rel="icon" type="image/png" href="/img/radutv.png">
 <link rel="apple-touch-icon" href="/img/radutv.png">
+<link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--bg:#191b17;--panel:#21231e;--panel2:#292b26;--ink:#ecdfcc;--ink2:rgba(236,223,204,.72);--ink3:rgba(236,223,204,.5);--sage:#a3ad93;--line:rgba(236,223,204,.14)}
+@font-face{font-family:Manrope;font-weight:200 800;font-display:swap;src:url(/fonts/manrope-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2199,U+2212}
+@font-face{font-family:Manrope;font-weight:200 800;font-display:swap;src:url(/fonts/manrope-latin-ext.woff2) format("woff2");unicode-range:U+0100-02AF,U+0218-021B,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+:root{
+  --bg:#121410;--panel:rgba(255,255,255,.04);--panel-b:rgba(236,223,204,.12);
+  --ink:#f1e6d4;--ink2:rgba(241,230,212,.72);--ink3:rgba(241,230,212,.48);
+  --sage:#a9b597;--sage2:#c9d4b4;--amber:#e8a94a;--line:rgba(241,230,212,.10);--r:22px;
+  --bar-h:64px;--safe-b:env(safe-area-inset-bottom,0px);
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-main{max-width:680px;margin:0 auto;padding:36px 16px 64px}
-h1{font-size:32px;margin:0;letter-spacing:.5px}
-h1.brand{display:flex;align-items:center}h1.brand img{width:52px;height:52px;border-radius:12px;margin-right:14px}
-.sub{color:var(--ink2);margin:6px 0 28px}
-h2{font-size:20px;margin:36px 0 14px}
-.steps{list-style:none;margin:0;padding:0;counter-reset:s}
-.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px;line-height:1.85}
-.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--sage);color:var(--bg);font-weight:800;display:flex;align-items:center;justify-content:center}
-.steps>li:not(:last-child)::after{content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--line)}
-.steps b{color:var(--ink)}
-.note{color:var(--ink3);font-size:15px;margin-top:4px}
-.codes{display:flex;flex-wrap:wrap;margin:12px 0 2px}
-.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:0 10px 10px 0}
-.tile small{display:block;color:var(--ink3);font-size:13px;text-transform:uppercase;letter-spacing:1.5px}
-.tile .big{font-size:34px;font-weight:800;letter-spacing:4px;color:var(--sage);white-space:nowrap}
-.tile .url{font-size:20px;font-weight:700;color:var(--sage);white-space:nowrap}
-.or{align-self:center;color:var(--ink3);margin:0 10px 10px 0}
-.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:14px 0}
-.box h3{margin:0 0 6px;font-size:17px}
-.box p{margin:6px 0;color:var(--ink2)}
-.path{background:var(--panel2);border-radius:6px;padding:1px 7px;font-size:15px;color:var(--ink);-webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:1.9}
-table{width:100%;border-collapse:collapse;font-size:16px}
-td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
-td:first-child{white-space:nowrap;padding-right:14px;font-weight:700;color:var(--sage)}
-a{color:var(--sage)}
-.app{display:inline-block;margin:2px 0;white-space:nowrap;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 6px;font-weight:700;color:var(--ink);line-height:1.5}
-.app::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c,var(--sage))}
-.app.gp{--c:#4fa3e0}
-.app.dl::before,.app.rt::before,.app.gp::before{display:none}
-.app img{width:17px;height:17px;border-radius:4px;margin-right:6px;vertical-align:-3px}
-.nw{white-space:nowrap}
-.appcard{display:inline-flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 16px 10px 10px;margin:12px 0 2px}
-.appcard img{width:56px;height:56px;border-radius:12px;margin-right:14px}
-.appcard b{display:block;font-size:19px}.appcard small{color:var(--ink3);font-size:14px}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Manrope,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--sage2)}
+b{font-weight:750}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+@media (max-width:600px){.wrap{padding:0 16px}}
+
+/* ambient light, tinted per platform */
+.aurora{position:fixed;inset:-25% -15% auto;height:110vh;pointer-events:none;z-index:0;filter:blur(100px);opacity:.5;transition:opacity .6s}
+.aurora i{position:absolute;border-radius:50%;animation:drift 24s ease-in-out infinite alternate;transition:background 1s}
+.aurora i:nth-child(1){width:44vw;height:44vw;left:6%;top:4%;background:var(--a1,#5f6f4a)}
+.aurora i:nth-child(2){width:38vw;height:38vw;right:4%;top:0;background:var(--a2,#8a6a33);animation-duration:30s}
+.aurora i:nth-child(3){width:34vw;height:34vw;left:40%;top:30%;background:var(--a3,#3e5a52);animation-duration:36s}
+[data-p=windows]{--a1:#4d6a5e;--a2:#7a6a3c;--a3:#3a5568}
+[data-p=mac]{--a1:#66704f;--a2:#6d5a7a;--a3:#3e5a52}
+@keyframes drift{to{transform:translate3d(5vw,4vh,0) scale(1.12)}}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+main,header,footer,.tabbar{position:relative;z-index:2}
+
+/* app bar */
+header{position:sticky;top:0;z-index:20;padding:12px 0;backdrop-filter:saturate(1.4) blur(18px);-webkit-backdrop-filter:saturate(1.4) blur(18px);background:rgba(18,20,16,.55);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+header.scrolled{border-bottom-color:var(--line);background:rgba(18,20,16,.78)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;text-decoration:none;color:var(--ink);font-weight:800;font-size:19px;letter-spacing:.3px;flex:none}
+.logo img{width:36px;height:36px;border-radius:9px;margin-right:11px}
+.seg{position:relative;display:flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.seg button{position:relative;z-index:1;display:flex;align-items:center;gap:8px;border:0;background:none;color:var(--ink2);font:inherit;font-size:15px;font-weight:700;padding:8px 18px;border-radius:999px;cursor:pointer;transition:color .25s}
+.seg button svg{width:18px;height:18px;opacity:.85}
+.seg button[aria-selected=true]{color:#151711}
+.seg .ind{position:absolute;z-index:0;top:4px;bottom:4px;left:0;width:0;border-radius:999px;background:linear-gradient(180deg,#d6e0c3,#a9b597);box-shadow:0 6px 20px -6px rgba(169,181,151,.6);transition:transform .45s cubic-bezier(.3,1.3,.5,1),width .45s cubic-bezier(.3,1.3,.5,1)}
+@media (max-width:760px){header .seg{display:none}}
+
+/* bottom tab bar on phones */
+.tabbar{display:none}
+@media (max-width:760px){
+  .tabbar{display:flex;position:fixed;left:12px;right:12px;bottom:calc(10px + var(--safe-b));z-index:30;padding:6px;border-radius:22px;background:rgba(30,32,27,.82);backdrop-filter:blur(20px) saturate(1.4);-webkit-backdrop-filter:blur(20px) saturate(1.4);border:1px solid var(--panel-b);box-shadow:0 18px 40px -10px rgba(0,0,0,.7)}
+  .tabbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;border:0;background:none;color:var(--ink3);font:inherit;font-size:12px;font-weight:700;padding:8px 0 6px;border-radius:16px;cursor:pointer;transition:color .2s,background .2s}
+  .tabbar button svg{width:22px;height:22px}
+  .tabbar button[aria-selected=true]{color:var(--ink);background:rgba(169,181,151,.16)}
+  body{padding-bottom:calc(96px + var(--safe-b))}
+}
+
+/* views */
+.view{display:none}
+.view.on{display:block;animation:enter .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:center;gap:56px;padding:48px 0 32px}
+@media (max-width:960px){.hero{grid-template-columns:1fr;gap:40px;padding-top:24px}}
+.pill{display:inline-flex;align-items:center;font-size:14px;font-weight:700;color:var(--sage2);background:rgba(169,181,151,.10);border:1px solid rgba(169,181,151,.25);padding:6px 14px 6px 10px;border-radius:999px}
+.pill i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--sage2);margin-right:9px;box-shadow:0 0 0 4px rgba(201,212,180,.15);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(201,212,180,0)}}
+h1{font-size:clamp(38px,5.4vw,66px);line-height:1.04;letter-spacing:-1.5px;margin:20px 0 18px;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--sage2),#e9c98c 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--ink2);max-width:540px;margin:0 0 30px}
+.cta{display:inline-flex;align-items:center;text-decoration:none;color:#151711;font-weight:800;font-size:19px;padding:17px 30px 17px 24px;border-radius:16px;border:0;cursor:pointer;
+  background:linear-gradient(180deg,#d6e0c3,#a9b597);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 18px 40px -12px rgba(169,181,151,.55),0 0 0 1px rgba(0,0,0,.2);transition:transform .18s ease,box-shadow .18s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 24px 50px -12px rgba(169,181,151,.7),0 0 0 1px rgba(0,0,0,.2)}
+.cta svg{width:22px;height:22px;margin-right:12px}
+.meta{margin-top:14px;color:var(--ink3);font-size:14.5px}
+.meta span+span::before{content:"·";margin:0 8px}
+.alt{margin-top:10px;color:var(--ink2);font-size:15px}
+.alt a{font-weight:700}
+.warn{display:none;margin-top:16px;font-size:15px;color:var(--amber);background:rgba(232,169,74,.08);border:1px solid rgba(232,169,74,.25);border-radius:12px;padding:10px 14px;max-width:470px}
+.tile{background:var(--panel);border:1px solid var(--panel-b);border-radius:18px;padding:12px 20px}
+.tile small{display:block;color:var(--ink3);font-size:12.5px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700}
+.tile .big{font-size:40px;font-weight:800;letter-spacing:5px;color:var(--sage2);line-height:1.2}
+.codecard{display:inline-block;padding:16px 26px 14px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02))}
+.codecard .big{font-size:48px;letter-spacing:7px}
+.or{color:var(--ink3);font-size:15px;margin-top:2px}.or b{color:var(--sage2)}
+
+/* devices: TV, monitor, laptop */
+.device{perspective:1600px}
+.frame{position:relative;transform:rotateY(-9deg) rotateX(4deg);transform-origin:60% 50%;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.device:hover .frame{transform:none}
+.scr{position:relative;border-radius:16px;padding:9px;background:linear-gradient(160deg,#2b2e27,#141612);box-shadow:0 0 0 1px rgba(255,255,255,.07) inset,0 50px 100px -30px rgba(0,0,0,.8),0 30px 120px -40px rgba(169,181,151,.35)}
+.scr img{display:block;width:100%;height:auto;border-radius:9px}
+.scr::after{content:"";position:absolute;inset:9px;border-radius:9px;background:linear-gradient(115deg,rgba(255,255,255,.10),transparent 38%);pointer-events:none}
+.tv .scr{border-radius:10px;padding:6px}.tv .scr img{border-radius:5px}
+.tv .legs{display:flex;justify-content:space-between;width:70%;margin:0 auto}.tv .legs i{width:16%;height:22px;background:linear-gradient(180deg,#22251f,#151712);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+.mon .stand{width:26%;height:44px;margin:0 auto;background:linear-gradient(180deg,#22251f,#171914);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.mon .base{width:42%;height:8px;margin:0 auto;border-radius:6px;background:#22251f;box-shadow:0 20px 40px -10px rgba(0,0,0,.8)}
+.lap .scr{border-radius:18px 18px 6px 6px;padding:12px 12px 16px}
+.lap .scr::before{content:"";position:absolute;top:0;left:50%;width:70px;height:10px;transform:translateX(-50%);background:#0d0e0b;border-radius:0 0 8px 8px;z-index:2}
+.lap .deck{height:16px;margin:0 -7%;border-radius:2px 2px 14px 14px;background:linear-gradient(180deg,#3a3d35,#1c1e19);box-shadow:0 26px 40px -14px rgba(0,0,0,.9)}
+.lap .deck::before{content:"";display:block;width:16%;height:6px;margin:0 auto;border-radius:0 0 8px 8px;background:#15170f}
+@media (prefers-reduced-motion:reduce){.aurora i,.pill i{animation:none}.frame{transform:none}.view.on{animation:none}}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:36px 0 0}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;backdrop-filter:blur(12px)}
+.stat b{display:block;font-size:28px;font-weight:800;letter-spacing:-.5px}
+.stat span{color:var(--ink3);font-size:15px}
+
+section{padding:72px 0 0}
+.eyebrow{color:var(--sage);font-weight:800;font-size:13px;letter-spacing:2.5px;text-transform:uppercase}
+h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-.8px;line-height:1.15;margin:10px 0 28px;font-weight:800}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.steps.six{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.steps,.steps.six{grid-template-columns:1fr}}
+.step{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--r);padding:24px 24px 26px}
+.step::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:12px;background:rgba(169,181,151,.14);color:var(--sage2);font-weight:800;margin-bottom:16px}
+.step h3{margin:0 0 6px;font-size:19px}
+.step p{margin:0;color:var(--ink2);font-size:16px}
+.chip{display:inline-flex;align-items:center;white-space:nowrap;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 5px;font-weight:700;color:var(--ink);line-height:1.6}
+.chip img{width:17px;height:17px;border-radius:4px;margin-right:6px}
+.path{background:rgba(255,255,255,.07);border-radius:6px;padding:1px 7px;font-size:15px;color:var(--ink);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.note{margin-top:20px;color:var(--ink3);font-size:15.5px}
+.ss{margin-top:16px;border-radius:12px;overflow:hidden;background:#1d5fa8;color:#fff;font-family:"Segoe UI",system-ui,sans-serif;font-size:13px;padding:14px 16px 12px;box-shadow:0 12px 30px -12px rgba(0,0,0,.6)}
+.ss strong{display:block;font-size:16px;font-weight:600;margin-bottom:6px}
+.ss .lnk{text-decoration:underline;font-weight:600;outline:2px solid var(--amber);outline-offset:2px;border-radius:2px}
+.ss .btns{display:flex;justify-content:flex-end;align-items:center;margin-top:12px}
+.ss .btn{border:1px solid rgba(255,255,255,.7);padding:4px 14px;margin-left:8px;font-size:12.5px}
+.ss .btn.on{outline:2px solid var(--amber);outline-offset:2px}
+.ss .arrow{color:var(--amber);font-weight:700}
+.mset{margin-top:16px;border-radius:12px;background:#2a2a2c;color:#e8e8ea;font-family:-apple-system,system-ui,sans-serif;font-size:13px;padding:14px 16px;box-shadow:0 12px 30px -12px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08)}
+.mset strong{display:block;font-size:14px;margin-bottom:6px}
+.mset .row{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#bdbdc2}
+.mset .mbtn{flex:none;background:#3a3a3d;border-radius:6px;padding:3px 10px;color:#fff;outline:2px solid var(--amber);outline-offset:2px}
+.keys{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.key{display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.cap{flex:none;min-width:46px;height:40px;padding:0 10px;margin-right:14px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap;
+  background:linear-gradient(180deg,#34372f,#23251f);box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 3px 0 #0c0d0a,0 4px 10px rgba(0,0,0,.35)}
+.cap.y{background:linear-gradient(180deg,#e9c46a,#c99a2e);color:#1a1a12}
+.cap.b{background:linear-gradient(180deg,#4a73c9,#2f55a8)}
+.cap.round{border-radius:50%;min-width:42px;width:42px;padding:0}
+.key span:last-child{color:var(--ink2);font-size:15.5px;line-height:1.4}
+details{border-top:1px solid var(--line);padding:4px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:700;font-size:17.5px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;color:var(--sage);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 16px;color:var(--ink2);max-width:780px}
+code{background:rgba(255,255,255,.07);border-radius:6px;padding:2px 7px;font-size:14.5px;color:var(--ink);word-break:break-all}
+.final{margin:80px 0 0;text-align:center;padding:52px 24px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(120% 140% at 50% 0%,rgba(169,181,151,.18),rgba(255,255,255,.02) 60%)}
+.final h2{margin:0 0 22px}
+footer{padding:48px 0 56px;color:var(--ink3);font-size:14.5px;text-align:center}
+footer a{color:var(--ink2)}
 </style></head>
-<body><main>
-<h1 class="brand"><img src="img/radutv.png" alt="">Radu TV</h1>
-<p class="sub">Televiziune românească și radio pe televizoarele cu <b>Android TV</b> sau <b>Google TV</b>: Sony, Philips, TCL, Xiaomi, Hisense, Chromecast cu Google TV, Google TV Streamer. Pe un televizor LG sau Samsung merge cu un stick Google TV conectat la HDMI.</p>
+<body>
+<div class="grain"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
 
-<h2>Instalare (durează 3–4 minute, o singură dată)</h2>
-<ol class="steps">
-<li><b>Instalează <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br>Pe televizor deschide <span class="nw"><span class="app gp"><img src="img/googleplay.png" alt="">Google Play</span>,</span> caută „Downloader” (poți folosi și butonul de microfon) și instalează aplicația cu sigla de mai jos. E gratuită.
-  <div><div class="appcard"><img src="img/downloader.png" alt="Downloader"><div><b>Downloader</b><small>de la AFTVnews · gratuită</small></div></div></div></li>
-<li><b>Deschide <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span></b><br> La prima pornire te întreabă dacă îi permiți acces la fișiere: alege <b>Permite</b>. Închide eventualele mesaje de bun venit.</li>
-<li><b>Scrie codul sau adresa</b> în câmpul de sus și apasă <b>Go</b>:
-  <div class="codes">
-    <div class="tile"><small>Cod</small><span class="big">3204554</span></div>
-    <span class="or">sau</span>
-    <div class="tile"><small>Adresă</small><span class="url">radu-tv.pages.dev/apk</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-win" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M12 9v12"/></symbol>
+  <symbol id="i-mac" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-1.5-4h-17z"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/><path d="M4 20h16"/></symbol>
+</svg>
+
+<header id="bar"><div class="wrap">
+  <a class="logo" href="/" data-go="tv"><img src="/img/radutv.png" alt="">Radu TV</a>
+  <div class="seg" role="tablist" aria-label="Platforma">
+    <span class="ind"></span>
+    <button role="tab" data-go="tv"><svg><use href="#i-tv"/></svg>Android TV</button>
+    <button role="tab" data-go="windows"><svg><use href="#i-win"/></svg>Windows</button>
+    <button role="tab" data-go="mac"><svg><use href="#i-mac"/></svg>Mac</button>
   </div>
-  </li>
-<li><b>Permite instalarea.</b> Televizorul spune că nu are voie să instaleze aplicații din <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>.</span> Apasă <b>Setări</b>, pornește comutatorul pentru <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>,</span> apoi revino cu <b>BACK</b>.
-  <div class="note">Dacă nu apare deloc opțiunea, vezi mai jos „Dacă nu merge”.</div></li>
-<li><b>Apasă Instalează</b>, apoi <b>Gata</b>. <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span> întreabă dacă șterge fișierul descărcat: alege <b>Șterge</b>, nu mai e nevoie de el.</li>
-<li><b>Pornește <span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span></b> din lista de aplicații a televizorului. Pe Google TV o găsești la <span class="path">Aplicații → Aplicațiile tale</span>. Poți să o muți pe ecranul principal ținând apăsat OK pe ea.
-  <div><div class="appcard"><img src="img/radutv.png" alt="Radu TV"><div><b>Radu TV</b><small>în lista de aplicații a televizorului</small></div></div></div></li>
-</ol>
+</div></header>
 
-<div class="box"><h3>După instalare</h3>
-<p>Poți dezinstala <span class="app dl"><img src="img/downloader.png" alt="">Downloader</span> sau îi poți lua înapoi permisiunea de instalare. <span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span> nu mai are nevoie de el.</p>
-<p><b>Actualizări:</b> când apare o versiune nouă, <span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span> te întreabă singur. Apeși OK. Prima dată, televizorul cere permisiunea de instalare și pentru <span class="nw"><span class="app rt"><img src="img/radutv.png" alt="">Radu TV</span>:</span> pornește comutatorul și revino cu BACK. Instalarea continuă singură.</p></div>
+<main class="wrap">
 
-<h2>Dacă nu merge</h2>
-<div class="box"><h3>Nu găsesc opțiunea „Surse necunoscute”</h3>
-<p>Pe televizoarele Google TV mai noi, opțiunea e ascunsă. Activează întâi modul dezvoltator:</p>
-<p><span class="path">Setări → Sistem → Despre</span>, coboară la <b>Android TV OS build</b> și apasă OK de 7 ori, până apare „Ești dezvoltator”.</p>
-<p>Apoi: <span class="path">Setări → Aplicații → Securitate și restricții → Surse necunoscute</span> și pornește <span class="nw"><span class="app dl"><img src="img/downloader.png" alt="">Downloader</span>.</span></p></div>
-<div class="box"><h3>Downloader nu găsește codul</h3>
-<p>Verifică cifrele: <b>3204554</b>. Sau scrie adresa <b>radu-tv.pages.dev/apk</b>.</p></div>
+<!-- ============ TV ============ -->
+<div class="view" data-view="tv">
+  <div class="hero">
+    <div>
+      <span class="pill"><i></i>Android TV · Google TV</span>
+      <h1>Televiziunea de acasă, <em>oriunde ai fi.</em></h1>
+      <p class="lead">Canale românești, radio și programul TV pe trei zile, pe televizorul cu Android TV sau Google TV. Gratuit, fără cont, cu telecomanda obișnuită.</p>
+      <div class="tile codecard">
+        <small>Cod Downloader</small><span class="big">3204554</span>
+        <div class="or">sau adresa <b>radu-tv.pages.dev/apk</b></div>
+      </div>
+      <div class="meta"><span data-ver="android">Gratuit</span><span>fără cont</span><span>se actualizează singură</span></div>
+    </div>
+    <div class="device tv"><div class="frame"><div class="scr"><img src="/img/app.jpg" width="1600" height="900" alt="Radu TV: ecranul de radio, cu egalizator animat"></div><div class="legs"><i></i><i></i></div></div></div>
+  </div>
 
-<h2>Telecomanda</h2>
-<table>
-<tr><td>Săgeți</td><td>Deschid lista. Sus/jos: canalul, stânga/dreapta: categoria</td></tr>
-<tr><td>OK</td><td>Pornește canalul selectat</td></tr>
-<tr><td>Ține apăsat OK</td><td>Meniu: favorite, programul canalului, stinge ecranul</td></tr>
-<tr><td>BACK</td><td>Închide sau deschide lista</td></tr>
-<tr><td>Cifre, CH, culori</td><td>Scurtături, dacă telecomanda le are</td></tr>
-</table>
+  <div class="stats">
+    <div class="stat"><b>140+</b><span>canale românești</span></div>
+    <div class="stat"><b>3 zile</b><span>de program TV</span></div>
+    <div class="stat"><b>Radio</b><span>cu melodia care rulează</span></div>
+    <div class="stat"><b>3–4 min</b><span>instalare, o singură dată</span></div>
+  </div>
 
-<p class="sub" style="margin-top:28px">Descărcare directă: <a href="/apk">ultima versiune</a></p>
-<p class="sub">Pe calculator cu Windows: <a href="/windows/">Radu TV pentru Windows</a></p>
-</main></body></html>
+  <section>
+    <div class="eyebrow">Instalare pe televizor</div>
+    <h2>Șase pași, o singură dată</h2>
+    <div class="steps six">
+      <div class="step"><h3>Instalează Downloader</h3><p>Pe televizor deschide <span class="chip"><img src="/img/googleplay.png" alt="">Google Play</span>, caută „Downloader” (merge și cu microfonul) și instalează aplicația <span class="chip"><img src="/img/downloader.png" alt="">Downloader</span>. E gratuită.</p></div>
+      <div class="step"><h3>Deschide Downloader</h3><p>La prima pornire cere acces la fișiere: alege <b>Permite</b>. Închide mesajele de bun venit.</p></div>
+      <div class="step"><h3>Scrie codul</h3><p>În câmpul de sus scrie <b>3204554</b> sau adresa <b>radu-tv.pages.dev/apk</b> și apasă <b>Go</b>.</p></div>
+      <div class="step"><h3>Permite instalarea</h3><p>Televizorul spune că Downloader nu are voie să instaleze aplicații. Apasă <b>Setări</b>, pornește comutatorul pentru Downloader și revino cu <b>BACK</b>.</p></div>
+      <div class="step"><h3>Instalează</h3><p>Apasă <b>Instalează</b>, apoi <b>Gata</b>. Când Downloader întreabă dacă șterge fișierul, alege <b>Șterge</b>.</p></div>
+      <div class="step"><h3>Pornește Radu TV</h3><p>Îl găsești la <span class="path">Aplicații → Aplicațiile tale</span>. Ține apăsat OK pe el ca să-l muți pe ecranul principal.</p></div>
+    </div>
+    <p class="note">După instalare, Downloader poate fi dezinstalat. Când apare o versiune nouă, Radu TV te întreabă singur: apeși OK. Prima dată, televizorul cere permisiunea de instalare și pentru Radu TV: pornește comutatorul și revino cu BACK.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Telecomanda</div>
+    <h2>Totul din săgeți și OK</h2>
+    <div class="keys">
+      <div class="key"><span class="cap">▲ ▼</span><span>Deschid lista, apoi aleg canalul</span></div>
+      <div class="key"><span class="cap">◀ ▶</span><span>Categoria: România, Moldova, Știri, Radio…</span></div>
+      <div class="key"><span class="cap round">OK</span><span>Pornește canalul selectat</span></div>
+      <div class="key"><span class="cap">ține OK</span><span>Meniu: favorite, program, stinge ecranul</span></div>
+      <div class="key"><span class="cap">BACK</span><span>Închide sau deschide lista</span></div>
+      <div class="key"><span class="cap">1 2 3</span><span>Cifre, CH și culori: scurtături, dacă telecomanda le are</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Întrebări</div>
+    <h2>Dacă ceva nu merge</h2>
+    <details><summary>Nu găsesc opțiunea „Surse necunoscute”</summary><p>Pe Google TV mai noi e ascunsă. Activează modul dezvoltator: <span class="path">Setări → Sistem → Despre</span>, coboară la <b>Android TV OS build</b> și apasă OK de 7 ori, până apare „Ești dezvoltator”. Apoi <span class="path">Setări → Aplicații → Securitate și restricții → Surse necunoscute</span> și pornește Downloader.</p></details>
+    <details><summary>Downloader nu găsește codul</summary><p>Verifică cifrele: <b>3204554</b>. Sau scrie adresa <b>radu-tv.pages.dev/apk</b>. Descărcare directă: <a href="/apk">ultima versiune</a>.</p></details>
+    <details><summary>Cum știu dacă televizorul are Android TV sau Google TV?</summary><p>Pe ecranul principal apare magazinul <b>Google Play</b> sau scrie <b>Google TV</b>. Dacă televizorul are alt sistem, merge cu un dispozitiv Google TV conectat la HDMI.</p></details>
+    <details><summary>Un canal nu pornește</summary><p>Canalele vin din surse publice care se mai schimbă. Dacă unul nu merge, apare „Canal indisponibil momentan”; lista se verifică zilnic și se repară de la sine.</p></details>
+  </section>
+</div>
+
+<!-- ============ WINDOWS ============ -->
+<div class="view" data-view="windows">
+  <div class="hero">
+    <div>
+      <span class="pill"><i></i>Nou · Windows 10 și 11</span>
+      <h1>Televiziunea de acasă, <em>pe calculator.</em></h1>
+      <p class="lead">Canale românești, radio și programul TV pe trei zile, într-o aplicație simplă. Aceleași canale și favorite ca pe televizor. Gratuit, fără cont.</p>
+      <a class="cta" href="/win"><svg><use href="#i-dl"/></svg>Descarcă pentru Windows</a>
+      <div class="meta"><span data-ver="windows">Versiunea 0.1.1</span><span>22 MB</span><span>fără administrator</span></div>
+      <div class="warn" data-warn="windows">Aceasta e varianta pentru Windows. Deschide pagina pe calculatorul cu Windows: <b>radu-tv.pages.dev/windows</b></div>
+    </div>
+    <div class="device mon"><div class="frame"><div class="scr"><img src="/img/app.jpg" width="1600" height="900" alt="Radu TV pe Windows: ecranul de radio"></div><div class="stand"></div><div class="base"></div></div></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>140+</b><span>canale românești</span></div>
+    <div class="stat"><b>3 zile</b><span>de program TV</span></div>
+    <div class="stat"><b>Radio</b><span>cu melodia care rulează</span></div>
+    <div class="stat"><b>Automat</b><span>se actualizează singură</span></div>
+  </div>
+
+  <section>
+    <div class="eyebrow">Instalare</div>
+    <h2>Trei pași, o singură dată</h2>
+    <div class="steps">
+      <div class="step"><h3>Descarcă</h3><p>Apasă <b>Descarcă pentru Windows</b> și deschide fișierul <b>RaduTV.exe</b> din Descărcări.</p></div>
+      <div class="step"><h3>Confirmă</h3><p>Windows nu cunoaște încă aplicația și te întreabă o dată. Apasă <b>Mai multe informații</b>, apoi <b>Rulează oricum</b>.</p>
+        <div class="ss" aria-hidden="true"><strong>Windows a protejat computerul</strong>Microsoft Defender SmartScreen a împiedicat pornirea unei aplicații nerecunoscute.<br><span class="lnk">Mai multe informații</span> <span class="arrow">← 1</span>
+          <div class="btns"><span class="arrow">2 →</span><span class="btn on">Rulează oricum</span><span class="btn">Nu rula</span></div></div></div>
+      <div class="step"><h3>Gata</h3><p>Aplicația se instalează și pornește. <b>Radu TV</b> apare pe Desktop și în meniul Start; fișierul descărcat poate fi șters.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Tastatura</div>
+    <h2>Ca la telecomandă</h2>
+    <div class="keys">
+      <div class="key"><span class="cap">↑ ↓</span><span>Lista: canalul anterior / următor</span></div>
+      <div class="key"><span class="cap">← →</span><span>Categoria: România, Moldova, Știri, Radio…</span></div>
+      <div class="key"><span class="cap">Enter</span><span>Pornește canalul selectat</span></div>
+      <div class="key"><span class="cap">Esc</span><span>Închide sau deschide lista</span></div>
+      <div class="key"><span class="cap">F11</span><span>Ecran complet</span></div>
+      <div class="key"><span class="cap y">F3</span><span>Adaugă la favorite</span></div>
+      <div class="key"><span class="cap b">F4</span><span>Programul canalului</span></div>
+      <div class="key"><span class="cap">1 2 3</span><span>Canalul cu numărul respectiv</span></div>
+      <div class="key"><span class="cap">PgUp</span><span>Canalul următor, fără listă</span></div>
+    </div>
+    <p class="note">Merge și cu mouse-ul: click pe un canal îl pornește, click pe imagine deschide lista, rotița derulează.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Întrebări</div>
+    <h2>Dacă ceva nu merge</h2>
+    <details><summary>Fereastra rămâne albă</summary><p>Aplicația folosește Microsoft Edge WebView2, care e deja pe Windows 10 și 11. Dacă lipsește, instalează-l de la <a href="https://developer.microsoft.com/microsoft-edge/webview2/">Microsoft</a> (varianta „Evergreen Bootstrapper”) și pornește din nou Radu TV.</p></details>
+    <details><summary>Antivirusul blochează fișierul</summary><p>Unele antivirusuri opresc programele noi, încă necunoscute. Permite fișierul <b>RaduTV.exe</b> în antivirus. Aplicația nu cere drepturi de administrator și nu instalează nimic altceva.</p></details>
+    <details><summary>Un canal nu pornește</summary><p>Canalele vin din surse publice care se mai schimbă. Dacă unul nu merge, apare „Canal indisponibil momentan”; lista se verifică zilnic și se repară de la sine.</p></details>
+    <details><summary>Cum o dezinstalez?</summary><p>Șterge scurtăturile Radu TV și folderul <code>%LOCALAPPDATA%\Programs\RaduTV</code>. Setările și favoritele sunt în <code>%LOCALAPPDATA%\RaduTV</code>.</p></details>
+  </section>
+
+  <div class="final"><h2>Gata de pornire?</h2><a class="cta" href="/win"><svg><use href="#i-dl"/></svg>Descarcă pentru Windows</a></div>
+</div>
+
+<!-- ============ MAC ============ -->
+<div class="view" data-view="mac">
+  <div class="hero">
+    <div>
+      <span class="pill"><i></i>Nou · macOS 12 sau mai nou</span>
+      <h1>Televiziunea de acasă, <em>pe Mac.</em></h1>
+      <p class="lead">Canale românești, radio și programul TV pe trei zile, într-o aplicație simplă. Aceleași canale și favorite ca pe televizor. Gratuit, fără cont.</p>
+      <a class="cta" href="/dl-mac"><svg><use href="#i-dl"/></svg>Descarcă pentru Mac</a>
+      <div class="meta"><span>procesor Apple (M1–M4)</span><span data-ver="mac">Versiunea 0.1.1</span><span>16 MB</span></div>
+      <div class="alt">Mac mai vechi, cu procesor Intel? <a href="/dl-mac-intel">Descarcă varianta Intel</a></div>
+      <div class="warn" data-warn="mac">Aceasta e varianta pentru Mac. Deschide pagina pe Mac: <b>radu-tv.pages.dev/mac</b></div>
+    </div>
+    <div class="device lap"><div class="frame"><div class="scr"><img src="/img/app.jpg" width="1600" height="900" alt="Radu TV pe Mac: ecranul de radio"></div><div class="deck"></div></div></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b>140+</b><span>canale românești</span></div>
+    <div class="stat"><b>3 zile</b><span>de program TV</span></div>
+    <div class="stat"><b>Radio</b><span>cu melodia care rulează</span></div>
+    <div class="stat"><b>Automat</b><span>se actualizează singură</span></div>
+  </div>
+
+  <section>
+    <div class="eyebrow">Instalare</div>
+    <h2>Trei pași, o singură dată</h2>
+    <div class="steps">
+      <div class="step"><h3>Descarcă și mută</h3><p>Apasă <b>Descarcă pentru Mac</b>. În Descărcări apare <b>Radu TV</b>: trage-l în folderul <b>Aplicații</b> din Finder.</p></div>
+      <div class="step"><h3>Permite o dată</h3><p>La prima deschidere, macOS spune că nu poate verifica aplicația. Apasă <b>Gata</b>, apoi <b>Setări sistem → Confidențialitate și securitate</b>, coboară și apasă <b>Deschide oricum</b>.</p>
+        <div class="mset" aria-hidden="true"><strong>Securitate</strong><div class="row"><span>„Radu TV” a fost blocată pentru a-ți proteja Mac-ul.</span><span class="mbtn">Deschide oricum</span></div></div></div>
+      <div class="step"><h3>Gata</h3><p>Confirmă cu parola Mac-ului. De acum Radu TV pornește din Aplicații sau din Launchpad, ca orice altă aplicație.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Tastatura</div>
+    <h2>Ca la telecomandă</h2>
+    <div class="keys">
+      <div class="key"><span class="cap">↑ ↓</span><span>Lista: canalul anterior / următor</span></div>
+      <div class="key"><span class="cap">← →</span><span>Categoria: România, Moldova, Știri, Radio…</span></div>
+      <div class="key"><span class="cap">Enter</span><span>Pornește canalul selectat</span></div>
+      <div class="key"><span class="cap">Esc</span><span>Închide sau deschide lista</span></div>
+      <div class="key"><span class="cap">F</span><span>Ecran complet</span></div>
+      <div class="key"><span class="cap y">Y</span><span>Adaugă la favorite</span></div>
+      <div class="key"><span class="cap b">B</span><span>Programul canalului</span></div>
+      <div class="key"><span class="cap">1 2 3</span><span>Canalul cu numărul respectiv</span></div>
+      <div class="key"><span class="cap">⌘ Q</span><span>Închide aplicația</span></div>
+    </div>
+    <p class="note">Merge și cu mouse-ul sau trackpad-ul: click pe un canal îl pornește, click pe imagine deschide lista.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Întrebări</div>
+    <h2>Dacă ceva nu merge</h2>
+    <details><summary>Nu găsesc butonul „Deschide oricum”</summary><p>Apare în <b>Setări sistem → Confidențialitate și securitate</b>, jos, la Securitate, doar după ce ai încercat o dată să deschizi aplicația. Pe macOS 12–14 merge și: click dreapta pe Radu TV → <b>Deschide</b> → <b>Deschide</b>.</p></details>
+    <details><summary>Spune că aplicația „e deteriorată”</summary><p>Mesajul vine de la marcajul de descărcare al browserului. Deschide Terminal și rulează <code>xattr -dr com.apple.quarantine "/Applications/Radu TV.app"</code>, apoi deschide aplicația din nou.</p></details>
+    <details><summary>Am procesor Apple sau Intel?</summary><p>Meniul Apple → <b>Despre acest Mac</b>. Dacă scrie <b>Cip Apple M1, M2, M3 sau M4</b>, folosește butonul principal. Dacă scrie <b>Procesor Intel</b>, folosește varianta Intel.</p></details>
+    <details><summary>Un canal nu pornește</summary><p>Canalele vin din surse publice care se mai schimbă. Dacă unul nu merge, apare „Canal indisponibil momentan”; lista se verifică zilnic și se repară de la sine.</p></details>
+    <details><summary>Cum o dezinstalez?</summary><p>Trage Radu TV din Aplicații la Coș. Setările și favoritele sunt în <code>~/Library/Application Support/RaduTV</code>.</p></details>
+  </section>
+
+  <div class="final"><h2>Gata de pornire?</h2><a class="cta" href="/dl-mac"><svg><use href="#i-dl"/></svg>Descarcă pentru Mac</a></div>
+</div>
+</main>
+
+<footer><div class="wrap">Radu TV · televiziune românească și radio · <a href="/" data-go="tv">Android TV</a> · <a href="/windows/" data-go="windows">Windows</a> · <a href="/mac/" data-go="mac">Mac</a></div></footer>
+
+<nav class="tabbar" role="tablist" aria-label="Platforma">
+  <button role="tab" data-go="tv"><svg><use href="#i-tv"/></svg>Android TV</button>
+  <button role="tab" data-go="windows"><svg><use href="#i-win"/></svg>Windows</button>
+  <button role="tab" data-go="mac"><svg><use href="#i-mac"/></svg>Mac</button>
+</nav>
+
+<script>
+(function () {
+  var PATHS = { tv: '/', windows: '/windows/', mac: '/mac/' };
+  var TITLES = { tv: 'Radu TV', windows: 'Radu TV pentru Windows', mac: 'Radu TV pentru Mac' };
+  var ua = navigator.userAgent, touch = 'ontouchend' in document;
+  var device = /Windows/i.test(ua) ? 'windows' : (/Macintosh/i.test(ua) && !touch) ? 'mac' : 'tv';
+  var root = document.documentElement, seg = document.querySelector('.seg'), ind = seg.querySelector('.ind');
+
+  function moveIndicator() {
+    var b = seg.querySelector('[aria-selected=true]'); if (!b) return;
+    ind.style.width = b.offsetWidth + 'px'; ind.style.transform = 'translateX(' + (b.offsetLeft) + 'px)';
+  }
+  function show(p, push) {
+    root.setAttribute('data-p', p);
+    document.querySelectorAll('.view').forEach(function (v) { v.classList.toggle('on', v.getAttribute('data-view') === p); });
+    document.querySelectorAll('[role=tab]').forEach(function (b) { b.setAttribute('aria-selected', b.getAttribute('data-go') === p); });
+    // a warning only when the visitor's device can't run that build
+    document.querySelectorAll('[data-warn]').forEach(function (w) { w.style.display = w.getAttribute('data-warn') !== device ? 'block' : 'none'; });
+    document.title = TITLES[p];
+    if (push && location.pathname !== PATHS[p]) history.pushState({ p: p }, '', PATHS[p]);
+    moveIndicator();
+  }
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-go]'); if (!t || e.metaKey || e.ctrlKey) return;
+    e.preventDefault(); show(t.getAttribute('data-go'), true); window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('popstate', function () { show(fromPath(), false); });
+  window.addEventListener('resize', moveIndicator);
+  window.addEventListener('scroll', function () { document.getElementById('bar').classList.toggle('scrolled', scrollY > 8); }, { passive: true });
+  function fromPath() { return /^\/windows/.test(location.pathname) ? 'windows' : /^\/mac/.test(location.pathname) ? 'mac' : 'tv'; }
+
+  // the home page opens on the visitor's own device; /windows/ and /mac/ open where they point
+  var start = location.pathname === '/' || location.pathname === '/index.html' ? device : fromPath();
+  show(start, false);
+  if (start !== fromPath()) history.replaceState({ p: start }, '', PATHS[start]);
+  if (document.fonts) document.fonts.ready.then(moveIndicator);
+
+  function ver(url, pick, key) {
+    fetch(url, { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (u) {
+      var v = pick(u); if (v) document.querySelectorAll('[data-ver=' + key + ']').forEach(function (e) { e.textContent = 'Versiunea ' + v; });
+    }).catch(function () {});
+  }
+  ver('/windows/update.json', function (u) { return u.version; }, 'windows');
+  ver('/mac/update.json', function (u) { return u.version; }, 'mac');
+  ver('/android/update.json', function (u) { return u.stable && u.stable.versionName; }, 'android');
+})();
+</script>
+</body></html>

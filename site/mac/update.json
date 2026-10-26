@@ -1,0 +1,6 @@
+{
+  "version": "0.1.1",
+  "arm64": "https://radu-tv.pages.dev/mac/RaduTV-mac-arm64-0.1.1.zip",
+  "x64": "https://radu-tv.pages.dev/mac/RaduTV-mac-x64-0.1.1.zip",
+  "notes": "Imagine mai clară, versiune pentru Mac, diagnosticare în radutv.log"
+}

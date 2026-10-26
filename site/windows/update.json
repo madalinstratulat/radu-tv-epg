@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
-  "exe": "https://radu-tv.pages.dev/windows/RaduTV-0.1.0.exe",
-  "notes": "Prima versiune pentru Windows"
+  "version": "0.1.1",
+  "exe": "https://radu-tv.pages.dev/windows/RaduTV-0.1.1.exe",
+  "notes": "Imagine mai clară, versiune pentru Mac, diagnosticare în radutv.log"
 }
