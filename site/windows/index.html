@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radu TV pentru Windows</title>
+<meta name="description" content="Televiziune românească și radio pe calculatorul cu Windows 10 sau 11.">
+<meta property="og:title" content="Radu TV pentru Windows">
+<meta property="og:description" content="Televiziune românească și radio pe calculatorul cu Windows 10 sau 11.">
+<meta property="og:image" content="https://radu-tv.pages.dev/img/og.png?v=4">
+<link rel="icon" type="image/png" href="/img/radutv.png">
+<style>
+:root{--bg:#191b17;--panel:#21231e;--panel2:#292b26;--ink:#ecdfcc;--ink2:rgba(236,223,204,.72);--ink3:rgba(236,223,204,.5);--sage:#a3ad93;--line:rgba(236,223,204,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+main{max-width:680px;margin:0 auto;padding:36px 16px 64px}
+h1{font-size:32px;margin:0;letter-spacing:.5px}
+h1.brand{display:flex;align-items:center}h1.brand img{width:52px;height:52px;border-radius:12px;margin-right:14px}
+.sub{color:var(--ink2);margin:6px 0 28px}
+h2{font-size:20px;margin:36px 0 14px}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps>li{counter-increment:s;position:relative;padding:0 0 22px 52px;line-height:1.85}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--sage);color:var(--bg);font-weight:800;display:flex;align-items:center;justify-content:center}
+.steps>li:not(:last-child)::after{content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;background:var(--line)}
+.steps b{color:var(--ink)}
+.note{color:var(--ink3);font-size:15px;margin-top:4px}
+.codes{display:flex;flex-wrap:wrap;margin:12px 0 2px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin:0 10px 10px 0}
+.tile small{display:block;color:var(--ink3);font-size:13px;text-transform:uppercase;letter-spacing:1.5px}
+.tile .big{font-size:34px;font-weight:800;letter-spacing:4px;color:var(--sage);white-space:nowrap}
+.tile .url{font-size:20px;font-weight:700;color:var(--sage);white-space:nowrap}
+.or{align-self:center;color:var(--ink3);margin:0 10px 10px 0}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:14px 0}
+.box h3{margin:0 0 6px;font-size:17px}
+.box p{margin:6px 0;color:var(--ink2)}
+.path{background:var(--panel2);border-radius:6px;padding:1px 7px;font-size:15px;color:var(--ink);-webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:1.9}
+table{width:100%;border-collapse:collapse;font-size:16px}
+td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{white-space:nowrap;padding-right:14px;font-weight:700;color:var(--sage)}
+a{color:var(--sage)}
+.app{display:inline-block;margin:2px 0;white-space:nowrap;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:0 8px 0 6px;font-weight:700;color:var(--ink);line-height:1.5}
+.app::before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:var(--c,var(--sage))}
+.app.gp{--c:#4fa3e0}
+.app.dl::before,.app.rt::before,.app.gp::before{display:none}
+.app img{width:17px;height:17px;border-radius:4px;margin-right:6px;vertical-align:-3px}
+.nw{white-space:nowrap}
+.appcard{display:inline-flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px 16px 10px 10px;margin:12px 0 2px}
+.appcard img{width:56px;height:56px;border-radius:12px;margin-right:14px}
+.appcard b{display:block;font-size:19px}.appcard small{color:var(--ink3);font-size:14px}
+.dlbtn{display:inline-block;background:var(--sage);color:var(--bg);font-weight:800;font-size:19px;text-decoration:none;border-radius:12px;padding:12px 22px;margin:6px 0 4px}
+</style></head>
+<body><main>
+<h1 class="brand"><img src="/img/radutv.png" alt="">Radu TV pentru Windows</h1>
+<p class="sub">Televiziune românească și radio pe calculator, cu Windows 10 sau 11. Aceleași canale, același program TV și aceleași favorite ca pe televizor.</p>
+
+<a class="dlbtn" href="/win">Descarcă Radu TV</a>
+<p class="note">Un singur fișier, RaduTV.exe (circa 22 MB). Nu cere drepturi de administrator.</p>
+
+<h2>Instalare (o singură dată)</h2>
+<ol class="steps">
+<li>Apasă <b>Descarcă Radu TV</b> și deschide fișierul descărcat, <b>RaduTV.exe</b>.</li>
+<li>Windows poate afișa <b>„Windows a protejat computerul”</b>. Apasă <b>Mai multe informații</b>, apoi <b>Rulează oricum</b>. Mesajul apare pentru că aplicația nu e cumpărată de la Microsoft Store, nu pentru că ar fi periculoasă.</li>
+<li>Aplicația se instalează singură și pornește. Pe <b>Desktop</b> și în meniul <b>Start</b> apare <b>Radu TV</b>; de acum o pornești de acolo. Fișierul descărcat poate fi șters.</li>
+</ol>
+<p class="note">Actualizările vin singure: se descarcă în fundal și se aplică la următoarea pornire.</p>
+
+<h2>Tastatura și mouse-ul</h2>
+<table>
+<tr><td>Săgeți</td><td>Deschid lista. Sus/jos: canalul, stânga/dreapta: categoria</td></tr>
+<tr><td>Enter</td><td>Pornește canalul selectat</td></tr>
+<tr><td>Esc sau Backspace</td><td>Închide sau deschide lista</td></tr>
+<tr><td>F11 sau F</td><td>Ecran complet</td></tr>
+<tr><td>F3</td><td>Favorit (galben)</td></tr>
+<tr><td>F4</td><td>Programul canalului (albastru)</td></tr>
+<tr><td>Page Up / Down</td><td>Canalul următor / anterior</td></tr>
+<tr><td>Cifre</td><td>Canalul cu numărul respectiv</td></tr>
+<tr><td>Mouse</td><td>Click pe un canal îl pornește, click pe imagine deschide sau închide lista, rotița derulează</td></tr>
+</table>
+
+<h2>Dacă nu merge</h2>
+<div class="box"><h3>Fereastra rămâne albă</h3>
+<p>Aplicația folosește Microsoft Edge WebView2, care e deja pe Windows 10 și 11. Dacă lipsește, instalează-l de la <a href="https://developer.microsoft.com/microsoft-edge/webview2/">Microsoft</a> (varianta „Evergreen Bootstrapper”) și pornește din nou Radu TV.</p></div>
+<div class="box"><h3>Antivirusul blochează fișierul</h3>
+<p>Unele antivirusuri blochează programele noi, nesemnate. Permite fișierul RaduTV.exe în antivirus sau scrie-ne.</p></div>
+<div class="box"><h3>Dezinstalare</h3>
+<p>Șterge scurtăturile Radu TV și folderul <span class="path">%LOCALAPPDATA%\Programs\RaduTV</span>. Setările sunt în <span class="path">%LOCALAPPDATA%\RaduTV</span>.</p></div>
+
+<p class="sub" style="margin-top:28px">Ai televizor cu Android TV sau Google TV? <a href="/">Instalare pe televizor</a></p>
+</main></body></html>
