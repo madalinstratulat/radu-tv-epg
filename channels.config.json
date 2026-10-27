@@ -9,6 +9,7 @@
         "DigiSport2.ro",
         "DisneyJunior.ro",
         "FilmNow.ro",
+        "Hunedoara1.ro",
         "KapitalTV.ro",
         "Minimax.ro",
         "NationalGeographic.ro",
@@ -17,6 +18,9 @@
         "RadioRomania3Net.ro",
         "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
+        "RealitateaPlus.ro",
+        "RealitateaSportiva.ro",
+        "RealitateaStar.ro",
         "TimelessDiziChannel.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
@@ -419,6 +423,9 @@
           "cc": "BE",
           "display": "RTBF Pure"
         }
+      ],
+      "exclude": [
+        "radio:961d41f3-0601-11e8-ae97-52543be04c81"
       ]
     }
   ],
