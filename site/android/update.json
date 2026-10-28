@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 11,
-    "versionName": "0.2.3",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.3.apk",
-    "notes": "Iconiță nouă care se potrivește în cerc"
+    "versionCode": 12,
+    "versionName": "0.2.4",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.4.apk",
+    "notes": "Nu mai intră screensaverul cât rulează aplicația (radio, ecran stins, canale TV)"
   },
   "test": {
-    "versionCode": 11,
-    "versionName": "0.2.3",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.3.apk",
-    "notes": "Iconiță nouă care se potrivește în cerc"
+    "versionCode": 12,
+    "versionName": "0.2.4",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.4.apk",
+    "notes": "Nu mai intră screensaverul cât rulează aplicația (radio, ecran stins, canale TV)"
   }
 }
