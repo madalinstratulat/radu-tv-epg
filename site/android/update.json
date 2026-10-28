@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 8,
-    "versionName": "0.2.0",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.0.apk",
-    "notes": "Teme de sezon (acum Halloween) cu efecte, ecran radio nou ca pe LG cu «Ecran mereu pornit / se stinge singur» afișat, siglă în banda de jos, font nou, piesa curentă la toate radiourile din listă"
+    "versionCode": 9,
+    "versionName": "0.2.1",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.1.apk",
+    "notes": "Ținând OK apăsat, meniul nu mai alege singur prima opțiune (scotea canale din favorite); volumul merge oricând; legenda mai mare"
   },
   "test": {
-    "versionCode": 8,
-    "versionName": "0.2.0",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.0.apk",
-    "notes": "Teme de sezon (acum Halloween) cu efecte, ecran radio nou ca pe LG cu «Ecran mereu pornit / se stinge singur» afișat, siglă în banda de jos, font nou, piesa curentă la toate radiourile din listă"
+    "versionCode": 9,
+    "versionName": "0.2.1",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.1.apk",
+    "notes": "Ținând OK apăsat, meniul nu mai alege singur prima opțiune (scotea canale din favorite); volumul merge oricând; legenda mai mare"
   }
 }
