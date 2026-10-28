@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 9,
-    "versionName": "0.2.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.1.apk",
-    "notes": "Ținând OK apăsat, meniul nu mai alege singur prima opțiune (scotea canale din favorite); volumul merge oricând; legenda mai mare"
+    "versionCode": 10,
+    "versionName": "0.2.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.2.apk",
+    "notes": "Derularea rapidă prin listă: canalul selectat rămâne mereu pe ecran"
   },
   "test": {
-    "versionCode": 9,
-    "versionName": "0.2.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.1.apk",
-    "notes": "Ținând OK apăsat, meniul nu mai alege singur prima opțiune (scotea canale din favorite); volumul merge oricând; legenda mai mare"
+    "versionCode": 10,
+    "versionName": "0.2.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.2.apk",
+    "notes": "Derularea rapidă prin listă: canalul selectat rămâne mereu pe ecran"
   }
 }
