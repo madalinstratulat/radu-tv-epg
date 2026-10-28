@@ -207,6 +207,7 @@
         "Kavkaz24.ru",
         "Kino24.ru",
         "Patriot.ru",
+        "RadioShanson.ru",
         "Samara24.ru",
         "SetantaSports1.ru",
         "SetantaSports2.ru",
@@ -425,6 +426,7 @@
         }
       ],
       "exclude": [
+        "radio:961acccd-0601-11e8-ae97-52543be04c81",
         "radio:961d41f3-0601-11e8-ae97-52543be04c81"
       ]
     }
