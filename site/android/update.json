@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 13,
-    "versionName": "0.2.5",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.5.apk",
-    "notes": "Butonul albastru ținut apăsat stinge acum ecranul"
+    "versionCode": 14,
+    "versionName": "0.2.6",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.6.apk",
+    "notes": "Favoritele și ultimul canal apar pe ecranul principal"
   },
   "test": {
-    "versionCode": 13,
-    "versionName": "0.2.5",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.5.apk",
-    "notes": "Butonul albastru ținut apăsat stinge acum ecranul"
+    "versionCode": 14,
+    "versionName": "0.2.6",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.2.6.apk",
+    "notes": "Favoritele și ultimul canal apar pe ecranul principal"
   }
 }
