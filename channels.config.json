@@ -9,8 +9,7 @@
         "DigiSport2.ro",
         "DisneyJunior.ro",
         "FilmNow.ro",
-        "LightChannel.ro",
-        "MISATV.ro",
+        "JOBTV.ro",
         "Minimax.ro",
         "NationalGeographic.ro",
         "Nickelodeon.ro",
@@ -103,12 +102,13 @@
         "Bruzz.be"
       ],
       "exclude": [
+        "BAMTV.be",
+        "BelRTL.be",
+        "CanalZoom.be",
+        "JapanimTV.be",
         "LaTrois.be",
         "RTLTVI.be",
-        "BelRTL.be",
-        "RadioContact.be",
-        "CanalZoom.be",
-        "BAMTV.be"
+        "RadioContact.be"
       ],
       "_note": "RTBF/RTL nu au stream-uri deschise (Auvio/RTL Play cu cont + DRM); adresele din iptv-org erau retransmisii expirate"
     },
