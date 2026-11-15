@@ -6,15 +6,16 @@
       "country": "RO",
       "exclude": [
         "ComedyCentral.ro",
-        "DigiSport2.ro",
         "DisneyJunior.ro",
         "FilmNow.ro",
         "JOBTV.ro",
+        "LightChannel.ro",
+        "MISATV.ro",
         "Minimax.ro",
         "NationalGeographic.ro",
-        "Nickelodeon.ro",
         "Nicktoons.ro",
         "Prima4K.ro",
+        "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
@@ -105,7 +106,6 @@
         "BAMTV.be",
         "BelRTL.be",
         "CanalZoom.be",
-        "JapanimTV.be",
         "LaTrois.be",
         "RTLTVI.be",
         "RadioContact.be"
@@ -208,7 +208,8 @@
         "VIVARussia.ru",
         "Vostok24.ru",
         "Zapad24.ru",
-        "alphaCinema.ru"
+        "alphaCinema.ru",
+        "red.ru"
       ]
     },
     {
