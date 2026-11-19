@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 20,
-    "versionName": "0.3.3",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.3.apk",
-    "notes": "Fara dubluri, istoric, sterge\n  serialul la final"
+    "versionCode": 21,
+    "versionName": "0.3.4",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.4.apk",
+    "notes": "Urmarite: unde ai ramas si ce\n  a aparut"
   },
   "test": {
-    "versionCode": 20,
-    "versionName": "0.3.3",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.3.apk",
-    "notes": "Fara dubluri, istoric, sterge\n  serialul la final"
+    "versionCode": 21,
+    "versionName": "0.3.4",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.4.apk",
+    "notes": "Urmarite: unde ai ramas si ce\n  a aparut"
   }
 }
