@@ -1,14 +1,14 @@
 {
   "stable": {
-    "versionCode": 18,
-    "versionName": "0.3.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.1.apk",
-    "notes": "Repara pornirea aplicatiei"
+    "versionCode": 19,
+    "versionName": "0.3.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.2.apk",
+    "notes": "Continua vizionarea,\n  sincronizare subtitrare, sterge de pe Mac, postere filme"
   },
   "test": {
-    "versionCode": 18,
-    "versionName": "0.3.1",
-    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.1.apk",
-    "notes": "Repara pornirea aplicatiei"
+    "versionCode": 19,
+    "versionName": "0.3.2",
+    "apk": "https://radu-tv.pages.dev/android/RaduTV-0.3.2.apk",
+    "notes": "Continua vizionarea,\n  sincronizare subtitrare, sterge de pe Mac, postere filme"
   }
 }
