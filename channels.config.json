@@ -18,9 +18,9 @@
         "NationalGeographic.ro",
         "Nicktoons.ro",
         "Prima4K.ro",
-        "PrimaSport2.ro",
         "PrimaSport3.ro",
         "PrimaSport4.ro",
+        "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
@@ -75,6 +75,9 @@
         "ExclusivTV.md",
         "SorTV.md",
         "MoldovaTV.md"
+      ],
+      "exclude": [
+        "PrivescEuTV.md"
       ]
     },
     {
@@ -200,6 +203,7 @@
       ],
       "exclude": [
         "15PlusMusic.ru",
+        "AbazaTV.ru",
         "Arktika24.ru",
         "Bashkortostan24.ru",
         "FONMusic.ru",
@@ -209,12 +213,10 @@
         "RadioShanson.ru",
         "Samara24.ru",
         "Sibir24.ru",
-        "Sochi24.ru",
         "Ural24.ru",
         "Vostok24.ru",
         "Zapad24.ru",
-        "alphaCinema.ru",
-        "red.ru"
+        "alphaCinema.ru"
       ]
     },
     {
