@@ -13,15 +13,15 @@
         "DisneyJunior.ro",
         "E.ro",
         "FilmNow.ro",
+        "JOBTV.ro",
         "Minimax.ro",
         "NHLAntenaPlay.ro",
         "NationalGeographic.ro",
         "Nicktoons.ro",
         "Prima4K.ro",
-        "PrimaSport3.ro",
-        "PrimaSport4.ro",
         "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
+        "Tele7ABCHD.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
         "ViasatNature.ro"
@@ -76,9 +76,7 @@
         "SorTV.md",
         "MoldovaTV.md"
       ],
-      "exclude": [
-        "PrivescEuTV.md"
-      ]
+      "exclude": []
     },
     {
       "id": "be",
@@ -203,7 +201,6 @@
       ],
       "exclude": [
         "15PlusMusic.ru",
-        "AbazaTV.ru",
         "Arktika24.ru",
         "Bashkortostan24.ru",
         "FONMusic.ru",
