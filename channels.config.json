@@ -6,17 +6,17 @@
       "country": "RO",
       "exclude": [
         "ComedyCentral.ro",
-        "DigiSport1.ro",
         "DisneyJunior.ro",
         "E.ro",
         "FilmNow.ro",
         "Formula2AntenaPlay.ro",
         "FormulaAcademyAntenaPlay.ro",
+        "MetropolaTV.ro",
         "Minimax.ro",
         "NationalGeographic.ro",
         "Prima4K.ro",
-        "RadioRomaniaIasi.ro",
         "RadioRomaniaResita.ro",
+        "SangeorzTV.ro",
         "UTV.ro",
         "ViasatExplore.ro",
         "ViasatHistory.ro",
@@ -109,10 +109,8 @@
         "BelRTL.be",
         "CanalZoom.be",
         "LaTrois.be",
-        "LaUne.be",
         "RTLTVI.be",
-        "RadioContact.be",
-        "Tipik.be"
+        "RadioContact.be"
       ],
       "_note": "RTBF/RTL nu au stream-uri deschise (Auvio/RTL Play cu cont + DRM); adresele din iptv-org erau retransmisii expirate"
     },
