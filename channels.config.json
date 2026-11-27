@@ -5,22 +5,12 @@
       "name": "România",
       "country": "RO",
       "exclude": [
-        "ComedyCentral.ro",
-        "DisneyJunior.ro",
+        "AlfaOmegaTV.ro",
         "E.ro",
-        "FilmNow.ro",
-        "Formula2AntenaPlay.ro",
         "FormulaAcademyAntenaPlay.ro",
-        "MetropolaTV.ro",
-        "Minimax.ro",
-        "NationalGeographic.ro",
         "Prima4K.ro",
         "RadioRomaniaResita.ro",
-        "SangeorzTV.ro",
-        "UTV.ro",
-        "ViasatExplore.ro",
-        "ViasatHistory.ro",
-        "ViasatNature.ro"
+        "RadioZU.ro"
       ],
       "urls": {
         "BollywoodClassic.ro": {
@@ -199,7 +189,6 @@
         "15PlusMusic.ru",
         "Arktika24.ru",
         "Bashkortostan24.ru",
-        "FONMusic.ru",
         "Kavkaz24.ru",
         "Kino24.ru",
         "Patriot.ru",
