@@ -5,10 +5,11 @@
       "name": "România",
       "country": "RO",
       "exclude": [
-        "AlfaOmegaTV.ro",
         "E.ro",
         "FormulaAcademyAntenaPlay.ro",
+        "NationalTV2.ro",
         "Prima4K.ro",
+        "RadioRomaniaAntenaSatelor.ro",
         "RadioRomaniaResita.ro",
         "RadioZU.ro"
       ],
@@ -62,7 +63,9 @@
         "SorTV.md",
         "MoldovaTV.md"
       ],
-      "exclude": []
+      "exclude": [
+        "RadioMoldovaMuzical.md"
+      ]
     },
     {
       "id": "be",
@@ -99,8 +102,10 @@
         "BelRTL.be",
         "CanalZoom.be",
         "LaTrois.be",
+        "LaUne.be",
         "RTLTVI.be",
-        "RadioContact.be"
+        "RadioContact.be",
+        "Tipik.be"
       ],
       "_note": "RTBF/RTL nu au stream-uri deschise (Auvio/RTL Play cu cont + DRM); adresele din iptv-org erau retransmisii expirate"
     },
